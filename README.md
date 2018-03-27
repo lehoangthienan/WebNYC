@@ -18,3 +18,11 @@ Trang Web bán hàng của người yêu cũ
   Key-value storage component
   
   Cache web controller
+  
+  # E-commerce model
+  
+  Customer to customer
+  
+  # Technology usage
+   
+   PHP&MySql
