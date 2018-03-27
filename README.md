@@ -29,5 +29,5 @@ Trang Web bán hàng của người yêu cũ
    
    # Deploy enviroments
    
-   -Mobile
-   -Web
+    -Mobile
+    -Web
