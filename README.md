@@ -3,7 +3,9 @@ Trang Web bán hàng của người yêu cũ
 
 Features:
   Beautiful theme
+  /n
   Build-in translation:
+  
     -English
     -Vietnamese
   Sign in, Sign up, profile(avatar, locale, personal data), email activation etc
