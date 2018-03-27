@@ -1,10 +1,10 @@
 # WebNYC
 Trang Web bán hàng của người yêu cũ
 
-Features:
-  Beautiful theme
-  /n
-  Build-in translation:
+#Features:
+  *Beautiful theme
+  
+  *Build-in translation:
   
     -English
     -Vietnamese
