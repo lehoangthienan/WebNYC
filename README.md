@@ -26,3 +26,8 @@ Trang Web bán hàng của người yêu cũ
   # Technology usage
    
    PHP&MySql
+   
+   # Deploy enviroments
+   
+   -Mobile
+   -Web
