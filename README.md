@@ -11,3 +11,13 @@
 +  Content management components: articles, categories, static pages, editable menu, editable carousels, text blocks
 +  Key-value storage component
 +  Cache web controller
+# Technology usage
+    
+    PHP&MySql
++ 
+# Deploy enviroments
+    
+-   -Mobile
+-   -Web
++    -Mobile
++    -Web
