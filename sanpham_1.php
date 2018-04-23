@@ -38,7 +38,7 @@ include('slider.php');
 						else
 						{
 							//Nếu p không có, thì sẽ truy vấn CSDL để tìm xem có bao nhiêu page
-							$query_pg="SELECT COUNT(id) FROM tblsanpham WHERE ten LIKE '%{$tukhoa}%'";
+							$query_pg="SELECT COUNT(id) FROM tblsanpham WHERE ten LIKE '%{$tukhoa}%'  AND status='0'";
 							$results_pg=mysqli_query($dbc,$query_pg);
 							kt_query($results_pg,$query_pg);
 							list($record)=mysqli_fetch_array($results_pg,MYSQLI_NUM);
@@ -68,7 +68,7 @@ include('slider.php');
 
 									<div class="sanpham_box_bottom">
 										<div class="sanpham_box_gia">Giá:&nbsp;<?php echo number_format($sanpham['gia'],0,'.','.').'&nbsp;'.$sanpham['donvitinh']; ?></div>
-										<a href="sanphamchitiet.php?id=<?php echo $sanpham['id'];?>" class="sanpham_box_order">Xem Chi Tiết</a>
+										<!--<a href="sanphamchitiet.php?id=<?php echo $sanpham['id'];?>" class="sanpham_box_order">Xem Chi Tiết</a>-->
 									</div>
 								</div>
 						</div>
