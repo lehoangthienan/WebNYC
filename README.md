@@ -4,8 +4,8 @@
 +Features:
 +  Beautiful theme
 +  Build-in translation:
-+    -English
-+    -Vietnamese
+    -English
+    -Vietnamese
 +  Sign in, Sign up, profile(avatar, locale, personal data), email activation etc
 +  User management
 +  Content management components: articles, categories, static pages, editable menu, editable carousels, text blocks
