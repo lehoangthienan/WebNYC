@@ -1,6 +1,6 @@
 ## WebNYC
  Trang Web bán hàng của người yêu cũ
-+
+ 
 +Features:
 +  Beautiful theme
 +  Build-in translation:
@@ -16,8 +16,7 @@
 ## Technology usage
  Key-value storage component
    
-   Cache web controller
-+  
+   Cache web controller 
 +  # E-commerce model
 +  
 +  Customer to customer
@@ -27,5 +26,5 @@
 +   PHP&MySql
 ## Deploy enviroments
     
--   -Mobile
--   -Web
+-   Mobile
+-   Web
