@@ -48,15 +48,25 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 						<div class="canle"><?php echo $dm_info['tomtat']; ?></div>
 						<div class="canle"><?php echo $dm_info['noidung']; ?></div>
 					</div>
+					
 					<?php
-					$query="UPDATE `tblsanpham` SET `status` = '1' WHERE `tblsanpham`.`id` = {$id}; ";
-					$results=mysqli_query($dbc,$query);
-					kt_query($results,$query);
-					?>
-					<form name="frmbaiviet" method="POST" enctype="multipart/form-data">
-						<input class="sanpham_box_order" type="submit" name="submit" class="btn btn-primary" value="Ẩn bài đăng">
-					</form>	
+					if(isset($_POST["dang_bai"])) {
+						
+						$query="UPDATE `tblsanpham` SET `status` = '1' WHERE `tblsanpham`.`id` = {$id}; ";
+						$results=mysqli_query($dbc,$query);
+						kt_query($results,$query);
+						
+					}
 
+					echo '
+					<form method="POST">
+
+					<input class="sanpham_box_order" type="submit" name="dang_bai" class="btn btn-primary" value="Ẩn bài đăng">
+					</form>
+
+					';
+					?>
+					  </script>
 				</div>
 			</div>
 		</div>
