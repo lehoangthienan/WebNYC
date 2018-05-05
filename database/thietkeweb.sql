@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 16, 2018 lúc 03:05 PM
+-- Thời gian đã tạo: Th5 05, 2018 lúc 07:09 AM
 -- Phiên bản máy phục vụ: 10.1.28-MariaDB
 -- Phiên bản PHP: 5.6.32
 
@@ -161,6 +161,7 @@ CREATE TABLE `tbllienhe` (
 CREATE TABLE `tblsanpham` (
   `id` int(10) NOT NULL,
   `idnguoidang` int(10) NOT NULL,
+  `danhmucsanpham` int(5) NOT NULL,
   `ten` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `ngaydang` date NOT NULL,
   `giodang` time NOT NULL,
@@ -169,25 +170,28 @@ CREATE TABLE `tblsanpham` (
   `anh` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `gia` int(10) NOT NULL,
   `donvitinh` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `view` int(11) NOT NULL
+  `view` int(11) NOT NULL,
+  `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tblsanpham`
 --
 
-INSERT INTO `tblsanpham` (`id`, `idnguoidang`, `ten`, `ngaydang`, `giodang`, `tomtat`, `noidung`, `anh`, `gia`, `donvitinh`, `view`) VALUES
-(1, 0, 'Điện Thoại SamSung Note8', '0000-00-00', '00:00:00', '', 'Cụ thể, đoạn quảng cáo trên đã ghi lại toàn bộ quá trình thay đổi của một chàng trai vốn là iFan chân chính từ năm 2007, nhưng cuối cùng lại quyết định chuyển sang sử dụng Galaxy Note 8 của Samsung vì những tính năng cao cấp \"không thể cưỡng lại được\". Đã lâu lắm rồi, kể từ thời Galaxy S II và Galaxy S III, người ra mới thấy một quảng cáo táo bạo và hài hước như vậy đến từ Samsung.\r\n\r\nMở đầu bằng bối cảnh năm 2007 - năm ra mắt dòng iPhone đầu tiên của Apple, anh chàng nhân vật chính của chúng ta đã bị cuốn hút bởi hình ảnh một dòng người xếp hàng dài đứng đợi trước Apple Store. Và cuối cùng chính anh cũng đã \"mở hầu bao\" để sở hữu một chiếc iPhone cho riêng mình. Ngay sau khi \"đập hộp\", anh lập tức gọi điện cho một người bạn với giọng điệu vô cùng đắc ý: \"Đoán xem tớ vừa mua được gì này\". Ở thời điểm ấy, có thể nói iPhone là một cái gì đó quá hấp dẫn, quá mới lạ mà bất cứ tín đồ công nghệ nào cũng muốn có được.\r\n\r\n', 'andres-iniesta.jpg', 1000000, 'VND', 1),
-(7, 0, 'Note 8', '0000-00-00', '00:00:00', '', 'Diện thoại Note 8', 'upload/636506554439585001_1.jpg', 1000, '$', 2),
-(11, 0, 'Iphone 7', '2018-04-02', '14:28:45', '', 'điện thoại cũ xài tốt', 'upload/iphone-7-gold_6e02-ls.jpg', 10000000, 'VNĐ', 4),
-(12, 0, 'Macbook', '2018-04-03', '10:17:23', '', '<p style=\"text-align:start\">Tính năng mã hoá&nbsp;<strong>FileVault Disk Encryption</strong>&nbsp;được bật mặt định trên Mac OS từ phiên bản Yosemite trở đi. Điều này giúp bảo vệ file trên MacBook của bạn, ngăn chặn việc truy cập trái phép trong trường hợp máy bị đánh cắp.</p>\r\n\r\n<p style=\"text-align:start\">Trong một số trường hợp, tính năng này có thể làm giảm tốc độ của MacBook. Để cải thiện tốc độ giúp MacBook chạy nhanh hơn, bạn có thể vào&nbsp;<strong>System Preferences</strong>, chọn&nbsp;<strong>Security &amp; Privacy</strong>&nbsp;--&gt;&nbsp;<strong>FileVault</strong>&nbsp;và tắt nó đi.</p>\r\n', 'upload/s-l1000.jpg', 2000, '$', 7),
-(13, 0, 'Nokia 1280', '2018-04-06', '15:47:59', 'điện thoại đen trắng', '<p>điện thoại cục gạch cực bền<br />\r\n&nbsp;</p>\r\n', 'upload/nokia-1280.jpg', 200000, 'VNĐ', 6),
-(14, 0, 'Note 3', '2018-04-09', '19:46:45', 'Note 3 k xài nữa', '<p>Note 3 k xài nữa bán</p>\r\n', 'upload/note3.jpg', 1500000, 'VNĐ', 1),
-(15, 0, 'Note 4', '2018-04-09', '19:50:29', 'Bán note 4', '<p>Note 4 xài ok</p>\r\n', 'upload/note4.png', 2000000, 'VNĐ', 0),
-(16, 0, 'Note 5', '2018-04-09', '19:51:00', 'note 5 xài rất ok', '<p>note 5 hàng cũ</p>\r\n', 'upload/note5.jpg', 2500000, 'VNĐ', 2),
-(19, 0, 'New macbook 12 MNYF2 Space Gray- Model 2017 (Hàng chính Hãng)', '2018-04-11', '11:16:49', 'Apple cập nhật toàn bộ dòng MacBook của hãng lên hệ phần cứng sử dụng chip Kaby Lake của Intel. MacBook 12 (2017) cũng không là ngoại lệ khi được thiết kế bộ vi xử lý Intel Core m3, i5 và i7 thế hệ th', '<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina&nbsp;</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina 12 inch tuyệt đẹp trên MacBook thực sự là điều cần quan tâm.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Với hơn 3 triệu điểm ảnh và không viền màn hình, mỗi bức ảnh đều nhảy ra khỏi màn hình với chi tiết phong phú, rực rỡ.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Tất cả trên một màn hình Retina mỏng đáng kinh ngạc.</span></p>\r\n\r\n<p style=\"text-align:start\"><img src=\"https://file.hstatic.net/1000190192/file/macbook-1024x576_grande.jpg\" style=\"border:0px; box-sizing:border-box; display:block; font-family:open sans,sans-serif !important; height:auto; margin-left:auto; margin-right:auto; max-width:100%; vertical-align:middle\" /></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Kiến trúc không quạt</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:open sans,sans-serif !important\">MacBook được xây dựng để các thao tác gần như không gây ra tiếng ồn.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Bộ xử lý của nó chạy chỉ với 5 watt điện, tạo ra ít nhiệt hơn và loại bỏ sự cần thiết phải có một quạt để làm mát máy tính.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Thay vào đó, bảng logic nằm trên một tấm graphite dị hướng giúp giải tán bất kỳ nhiệt nào.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Vì vậy, bạn sẽ không nghe thấy một tiếng ồn nào trong khi MacBook của bạn là khó làm việc.</span></p>\r\n\r\n<p style=\"text-align:start\"><img src=\"https://file.hstatic.net/1000190192/file/2_grande.jpg\" style=\"border:0px; box-sizing:border-box; display:block; font-family:open sans,sans-serif !important; height:auto; margin-left:auto; margin', 'upload/s-l1000.jpg', 27790000, 'VNĐ', 3),
-(20, 0, 'New macbook 12 MNYF2 Space Gray- Model 2017', '2018-04-11', '11:58:37', 'Apple cập nhật toàn bộ dòng MacBook của hãng lên hệ phần cứng sử dụng chip Kaby Lake của Intel. MacBook 12 (2017) cũng không là ngoại lệ khi được thiết kế bộ vi xử lý Intel Core m3, i5 và i7 thế hệ th', '<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina&nbsp;</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina 12 inch tuyệt đẹp trên MacBook thực sự là điều cần quan tâm.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Với hơn 3 triệu điểm ảnh và không viền màn hình, mỗi bức ảnh đều nhảy ra khỏi màn hình với chi tiết phong phú, rực rỡ.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Tất cả trên một màn hình Retina mỏng đáng kinh ngạc.</span></p>\r\n\r\n<p style=\"text-align:start\"><img src=\"https://file.hstatic.net/1000190192/file/macbook-1024x576_grande.jpg\" style=\"border:0px; box-sizing:border-box; display:block; font-family:open sans,sans-serif !important; height:auto; margin-left:auto; margin-right:auto; max-width:100%; vertical-align:middle\" /></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Kiến trúc không quạt</span></strong></p>\r\n', 'upload/s-l1000.jpg', 27790000, 'VNĐ', 2),
-(21, 0, 'HP 15 bs571TU i3 6006U/4GB/1TB/Win10/(2JQ68PA)', '2018-04-11', '12:01:55', 'Dòng laptop giá rẻ, cấu hình tốt\r\n', '<h3 style=\"color:rgb(51, 51, 51); font-style:normal; text-align:start\">Dòng laptop giá rẻ, cấu hình tốt</h3>\r\n\r\n<p style=\"text-align:start\"><a href=\"https://www.dienmayxanh.com/laptop/hp-15-bs571tu-i3-6006u-2jq68pa\" style=\"margin: 0px; padding: 0px; border: 0px; vertical-align: baseline; text-decoration: none; color: rgb(40, 138, 214);\" target=\"_blank\" title=\"HP 15 bs571TU i3 6006U/4GB/1TB/Win10/(2JQ68PA)\" type=\"HP 15 bs571TU i3 6006U/4GB/1TB/Win10/(2JQ68PA)\">HP 15 bs571TU</a>&nbsp;là chiếc laptop thuộc dòng sản phẩm giá rẻ tầm 10 triệu của HP nhưng lại có cấu hình tốt, nổi bật chính là màn hình 15.6 inch, vi xử lý Intel core i3 thế hệ 6, ổ cứng đến 1 TB và chạy Windows 10. Máy có thiết kế đơn giản với vỏ nhựa và nặng dưới 2 kg giúp bạn thuận tiện khi di chuyển, sử dụng.</p>\r\n\r\n<p><img alt=\"HP 15 bs571TU i3 6006U/4GB/1TB/Win10/(2JQ68PA)\" class=\"lazy\" src=\"https://cdn.tgdd.vn/Products/Images/44/111129/hp-15-bs571tu-i3-6006u-2jq68pa-den-12-1.jpg\" style=\"-webkit-text-stroke-width:0px; background-color:rgb(255, 255, 255); border:0px; color:rgb(51, 51, 51); display:block; font-family:arial,helvetica,sans-serif; font-size:15px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; height:auto; letter-spacing:normal; margin:15px auto 5px; max-width:100%; opacity:1; orphans:2; padding:0px; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; transition:opacity 0.3s ease-in; vertical-align:baseline; white-space:normal; widows:2; width:780px; word-spacing:0px\" title=\"HP 15 bs571TU i3 6006U/4GB/1TB/Win10/(2JQ68PA)\" /></p>\r\n\r\n<h3 style=\"color:rgb(51, 51, 51); font-style:normal; text-align:start\">Màn hình 15.6 inch, HD sắc nét</h3>\r\n\r\n<p style=\"text-align:start\">HP 15 bs571TU dùng để chơi game, xem phim hay làm việc đều tốt với màn hình lớn đến 15.6 inch cho nhiều không gian hoạt động, độ phân giải HD khá sắc nét.</p>\r\n\r\n<h3 style=\"color:rgb(51, 51, 51); font-style:normal; text-align:start\"><img alt=\"HP 15 bs571TU i3 6006U/4GB/1TB/Win10/(2JQ68PA)\" class=\"lazy\" src=\"https://cdn.tgdd.vn/Products/Images/44/111129/hp-15-bs571tu-i3-6006u-2jq68pa-den-2-2.jpg\" style=\"border:0px; display:block; height:auto; margin:15px auto 5px; max-width:100%; opacity:1; padding:0px; transition:opacity 0.3s ease-in; vertical-align:baseline; width:780px\" title=\"HP 15 bs571TU i3 6006U/4GB/1TB/Win10/(2JQ68PA)\" />Cấu hình ổn định</h3>\r\n\r\n<p style=\"text-align:start\">Dòng laptop thế hệ mới được trang bị vi xử lý mới Intel thế hệ thứ 6 Skylake core i3 6006U. HP 15 bs571TU đủ tốt để đáp ứng phần lớn nhu cầu sử dụng của bạn.</p>\r\n\r\n<p style=\"text-align:start\">Bộ nhớ RAM DDR4 4 GB cùng bộ nhớ lưu trữ dữ liệu lớn đến 1 TB.</p>\r\n', '', 27790000, 'VNĐ', 1);
+INSERT INTO `tblsanpham` (`id`, `idnguoidang`, `danhmucsanpham`, `ten`, `ngaydang`, `giodang`, `tomtat`, `noidung`, `anh`, `gia`, `donvitinh`, `view`, `status`) VALUES
+(1, 0, 2, 'Điện Thoại SamSung Note8', '0000-00-00', '00:00:00', '', 'Cụ thể, đoạn quảng cáo trên đã ghi lại toàn bộ quá trình thay đổi của một chàng trai vốn là iFan chân chính từ năm 2007, nhưng cuối cùng lại quyết định chuyển sang sử dụng Galaxy Note 8 của Samsung vì những tính năng cao cấp \"không thể cưỡng lại được\". Đã lâu lắm rồi, kể từ thời Galaxy S II và Galaxy S III, người ra mới thấy một quảng cáo táo bạo và hài hước như vậy đến từ Samsung.\r\n\r\nMở đầu bằng bối cảnh năm 2007 - năm ra mắt dòng iPhone đầu tiên của Apple, anh chàng nhân vật chính của chúng ta đã bị cuốn hút bởi hình ảnh một dòng người xếp hàng dài đứng đợi trước Apple Store. Và cuối cùng chính anh cũng đã \"mở hầu bao\" để sở hữu một chiếc iPhone cho riêng mình. Ngay sau khi \"đập hộp\", anh lập tức gọi điện cho một người bạn với giọng điệu vô cùng đắc ý: \"Đoán xem tớ vừa mua được gì này\". Ở thời điểm ấy, có thể nói iPhone là một cái gì đó quá hấp dẫn, quá mới lạ mà bất cứ tín đồ công nghệ nào cũng muốn có được.\r\n\r\n', 'andres-iniesta.jpg', 1000000, 'VND', 2, 1),
+(7, 6, 2, 'Note 8', '0000-00-00', '00:00:00', '', 'Diện thoại Note 8', 'upload/636506554439585001_1.jpg', 1000, '$', 2, 0),
+(11, 6, 2, 'Iphone 7', '2018-04-02', '14:28:45', '', 'điện thoại cũ xài tốt', 'upload/iphone-7-gold_6e02-ls.jpg', 10000000, 'VNĐ', 5, 1),
+(12, 6, 2, 'Macbook', '2018-04-03', '10:17:23', '', '<p style=\"text-align:start\">Tính năng mã hoá&nbsp;<strong>FileVault Disk Encryption</strong>&nbsp;được bật mặt định trên Mac OS từ phiên bản Yosemite trở đi. Điều này giúp bảo vệ file trên MacBook của bạn, ngăn chặn việc truy cập trái phép trong trường hợp máy bị đánh cắp.</p>\r\n\r\n<p style=\"text-align:start\">Trong một số trường hợp, tính năng này có thể làm giảm tốc độ của MacBook. Để cải thiện tốc độ giúp MacBook chạy nhanh hơn, bạn có thể vào&nbsp;<strong>System Preferences</strong>, chọn&nbsp;<strong>Security &amp; Privacy</strong>&nbsp;--&gt;&nbsp;<strong>FileVault</strong>&nbsp;và tắt nó đi.</p>\r\n', 'upload/s-l1000.jpg', 2000, '$', 8, 1),
+(13, 0, 0, 'Nokia 1280', '2018-04-06', '15:47:59', 'điện thoại đen trắng', '<p>điện thoại cục gạch cực bền<br />\r\n&nbsp;</p>\r\n', '', 199000, '', 21, 0),
+(14, 0, 2, 'Note 3', '2018-04-09', '19:46:45', 'Note 3 k xài nữa', '<p>Note 3 k xài nữa bán</p>\r\n', 'upload/note3.jpg', 1500000, 'VNĐ', 2, 1),
+(15, 0, 2, 'Note 4', '2018-04-09', '19:50:29', 'Bán note 4', '<p>Note 4 xài ok</p>\r\n', 'upload/note4.png', 2000000, 'VNĐ', 1, 0),
+(16, 0, 2, 'Note 5', '2018-04-09', '19:51:00', 'note 5 xài rất ok', '<p>note 5 hàng cũ</p>\r\n', 'upload/note5.jpg', 2500000, 'VNĐ', 15, 0),
+(19, 0, 2, 'New macbook 12 MNYF2 Space Gray- Model 2017 (Hàng chính Hãng)', '2018-04-11', '11:16:49', 'Apple cập nhật toàn bộ dòng MacBook của hãng lên hệ phần cứng sử dụng chip Kaby Lake của Intel. MacBook 12 (2017) cũng không là ngoại lệ khi được thiết kế bộ vi xử lý Intel Core m3, i5 và i7 thế hệ th', '<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina&nbsp;</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina 12 inch tuyệt đẹp trên MacBook thực sự là điều cần quan tâm.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Với hơn 3 triệu điểm ảnh và không viền màn hình, mỗi bức ảnh đều nhảy ra khỏi màn hình với chi tiết phong phú, rực rỡ.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Tất cả trên một màn hình Retina mỏng đáng kinh ngạc.</span></p>\r\n\r\n<p style=\"text-align:start\"><img src=\"https://file.hstatic.net/1000190192/file/macbook-1024x576_grande.jpg\" style=\"border:0px; box-sizing:border-box; display:block; font-family:open sans,sans-serif !important; height:auto; margin-left:auto; margin-right:auto; max-width:100%; vertical-align:middle\" /></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Kiến trúc không quạt</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:open sans,sans-serif !important\">MacBook được xây dựng để các thao tác gần như không gây ra tiếng ồn.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Bộ xử lý của nó chạy chỉ với 5 watt điện, tạo ra ít nhiệt hơn và loại bỏ sự cần thiết phải có một quạt để làm mát máy tính.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Thay vào đó, bảng logic nằm trên một tấm graphite dị hướng giúp giải tán bất kỳ nhiệt nào.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Vì vậy, bạn sẽ không nghe thấy một tiếng ồn nào trong khi MacBook của bạn là khó làm việc.</span></p>\r\n\r\n<p style=\"text-align:start\"><img src=\"https://file.hstatic.net/1000190192/file/2_grande.jpg\" style=\"border:0px; box-sizing:border-box; display:block; font-family:open sans,sans-serif !important; height:auto; margin-left:auto; margin', 'upload/s-l1000.jpg', 27790000, 'VNĐ', 8, 1),
+(20, 0, 2, 'New macbook 12 MNYF2 Space Gray- Model 2017', '2018-04-11', '11:58:37', 'Apple cập nhật toàn bộ dòng MacBook của hãng lên hệ phần cứng sử dụng chip Kaby Lake của Intel. MacBook 12 (2017) cũng không là ngoại lệ khi được thiết kế bộ vi xử lý Intel Core m3, i5 và i7 thế hệ th', '<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina&nbsp;</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina 12 inch tuyệt đẹp trên MacBook thực sự là điều cần quan tâm.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Với hơn 3 triệu điểm ảnh và không viền màn hình, mỗi bức ảnh đều nhảy ra khỏi màn hình với chi tiết phong phú, rực rỡ.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Tất cả trên một màn hình Retina mỏng đáng kinh ngạc.</span></p>\r\n\r\n<p style=\"text-align:start\"><img src=\"https://file.hstatic.net/1000190192/file/macbook-1024x576_grande.jpg\" style=\"border:0px; box-sizing:border-box; display:block; font-family:open sans,sans-serif !important; height:auto; margin-left:auto; margin-right:auto; max-width:100%; vertical-align:middle\" /></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Kiến trúc không quạt</span></strong></p>\r\n', 'upload/s-l1000.jpg', 27790000, 'VNĐ', 7, 1),
+(21, 6, 1, 'Ghê đôi tình nhân', '2018-04-17', '23:32:27', 'Ghê đôi đẹp', '<p>Ghế đôi tình nhân xuất xứ từ nhật bản, êm ái mềm mại</p>\r\n', 'upload/jonah2cho-01_master.jpg', 1000000, 'VNĐ', 49, 0),
+(22, 6, 0, 'Đồng hồ người yêu cũ tặng', '2018-04-17', '23:38:23', 'Đồng hồ người yêu cũ tặng', '<p>Đồng hộ chạy tốt, của người yêu cũ tặng, màu đồng rất đẹp.<br />\r\n&nbsp;</p>\r\n', 'upload/big-bang-44-467149f15489.jpg', 1000000, '', 27, 0),
+(23, 0, 2, 'Dien Thoai', '2018-04-22', '10:39:57', 'asdfghjk', '<p>zxcvbnmsdfghj</p>\r\n', 'upload/iphone-7-gold_6e02-ls.jpg', 10000000, 'vnd', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -237,9 +241,16 @@ CREATE TABLE `tbltaikhoan` (
   `id` int(10) NOT NULL,
   `hoten` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `diachi` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `sodienthoai` int(15) NOT NULL,
+  `sodienthoai` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
   `sobaidang` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tbltaikhoan`
+--
+
+INSERT INTO `tbltaikhoan` (`id`, `hoten`, `diachi`, `sodienthoai`, `sobaidang`) VALUES
+(1, 'Nguyễn Công Hoan', 'Trường đại học công nghệ thông tin', '0985315125', 1);
 
 -- --------------------------------------------------------
 
@@ -279,11 +290,7 @@ CREATE TABLE `tbluser` (
 --
 
 INSERT INTO `tbluser` (`id`, `taikhoan`, `matkhau`, `hoten`, `dienthoai`, `email`, `diachi`, `status`) VALUES
-(1, 'dvdung97', '71f9912bec34655763dbcab4533a9d3d', 'Đặng Việt Dũng', '0949930259', 'dvdung97@gmail.com', 'Nghệ An', 1),
-(2, 'dung', '71f9912bec34655763dbcab4533a9d3d', 'Đặng Việt Dũng', '0949930259', 'dvdung97@gmail.com', 'Quỳnh Lưu', 1),
-(3, 'loandung', 'dungloan', 'Đặng Việt Dũng', '0949930259', 'dvdung97@gmail.com', 'Nghệ An', 1),
-(4, 'dungql', '71f9912bec34655763dbcab4533a9d3d', 'Đặng Việt Dũng', '0949930259', 'dvdung97@gmail.com', 'Nghệ An', 1),
-(5, 'dung_loan', '71f9912bec34655763dbcab4533a9d3d', 'Đặng Việt Dũng', '0949930259', 'dvdung97@gmail.com', 'Nghệ An', 1);
+(6, 'nguyenconghoan', 'conghoan', 'Nguyễn Công Hoan', '0985315125', 'hoannc@edu.vn', 'Trường đại học công nghệ thông tin', 1);
 
 -- --------------------------------------------------------
 
@@ -424,7 +431,7 @@ ALTER TABLE `tbllienhe`
 -- AUTO_INCREMENT cho bảng `tblsanpham`
 --
 ALTER TABLE `tblsanpham`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT cho bảng `tblslider`
@@ -442,7 +449,7 @@ ALTER TABLE `tblsupports`
 -- AUTO_INCREMENT cho bảng `tbltaikhoan`
 --
 ALTER TABLE `tbltaikhoan`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `tblthongtincongty`
@@ -454,7 +461,7 @@ ALTER TABLE `tblthongtincongty`
 -- AUTO_INCREMENT cho bảng `tbluser`
 --
 ALTER TABLE `tbluser`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `tblvideo`
