@@ -6,7 +6,7 @@
      </div>
      <div class="box_main">
      	<div id="support">
-        	<p><a href=""><img src="images/yahoo.png"></a><a href=""><img src="images/skype.png"></a></p> 	
+        	<p><a href=""><img src="images/ll.png"></a></p> 	
         	<p>Hotline:&nbsp;<span>0949930259</span></p>
         	<p>Email:&nbsp;dvdung97@gmail.com</p>
     	</div>
