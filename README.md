@@ -27,5 +27,5 @@
 +   PHP&MySql
 ## Deploy enviroments
     
--   Mobile
+-   
 -   Web
