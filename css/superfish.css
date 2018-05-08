@@ -50,10 +50,10 @@
 	zoom: 1; /* IE7 */
 }
 .sf-menu a {
-	color: #13a;
+	color: #FFF;
 }
 .sf-menu li {
-	background: #C0C0C0;
+	background-color: #00CCFF;
 	white-space: nowrap; /* no need for Supersubs plugin */
 	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
 	-webkit-transition: background .2s;

@@ -11,8 +11,12 @@ body
 #menu
 {
 	position: relative;
-	background:#C0C0C0;
-	z-index:9999;
+    background-color: #00CCFF;
+    font-family: "Cambria", "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+    z-index: 999;   
+    font-weight: bold;
+
+	
 }
 #menu_top
 {
