@@ -18,8 +18,8 @@
      </div>
      <div class="box_main">
      	<div id="video">
-        	<div id="content_video">
-                <iframe width="100%" src="https://www.youtube.com/embed/Aj3HsW7cmIw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        	<div id="content_video" >
+                <iframe width="100%" src="https://www.youtube.com/embed/Aj3HsW7cmIw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
 			</div>
 			<div class="clearfix"></div>
     	</div>

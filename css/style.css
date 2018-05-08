@@ -15,8 +15,6 @@ body
     font-family: "Cambria", "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
     z-index: 999;   
     font-weight: bold;
-
-	
 }
 #menu_top
 {
@@ -105,6 +103,12 @@ body
 .tin_row
 {
 	width:100%:;
+}
+.comboboxDanhSach{
+		margin-left: 150px;
+	 -moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+	  opacity: 0.6;
 }
 .tin_row p
 {
@@ -211,11 +215,15 @@ body
 	width:100%;
 	border:1px solid #ddd;
 	margin-top:15px;
+	-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
 }
 .box_top
 {
 	height:34px;
 	background:#C0C0C0;
+	-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
 }
 .box_top p
 {
@@ -234,6 +242,7 @@ body
 	margin-bottom:0;
 	text-transform:uppercase;
 }
+
 .box_center
 {
 	margin-top:15px;
@@ -431,7 +440,14 @@ body
 #video
 {
 	padding:10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 }
+#content_video{
+	-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
 .list-video
 {
     list-style:none;
@@ -535,9 +551,15 @@ body
 	top: 50%;
 	left: 50%;
 	transform: translateY(-50%) translateX(-50%);
+	 -moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	 
  }
  .aaa {
  	margin-left: 150px;
+	 -moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+	  opacity: 0.6;
  }
  .bbb
  {
@@ -545,13 +567,22 @@ body
  }
  .ccc
  {
- 	background-color: #488BF8;
- 	color: #F8F8FF;
+ 	border: 2px solid #488BF8;
+    border-radius: 5px;
+    background-color: #488BF8;
+    color: #F8F8FF;
+    font-size: 20px;
+    box-shadow: 5px 5px 5px #666;
+    -moz-box-shadow: 5px 5px 5px #666;
+    -webkit-box-shadow: 5px 5px 5px #666;
+    height: 30px;
+    margin-bottom: 10px;
  }
  .width_bar
  {
- 	width:400px;
- 	background-color: hsla(0,0%,100%,.8);
+ font-size: 30px;
+	 background: transparent;
+ 	font-weight: 700;
  }
 #wowslider-container { 
 	zoom: 1; 
