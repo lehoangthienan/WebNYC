@@ -63,6 +63,7 @@ include('slider.php');
 						if(($_FILES['img']['type']!="image/gif")
 							&&($_FILES['img']['type']!="image/png")
 							&&($_FILES['img']['type']!="image/jpeg")
+							&&($_FILES['img']['type']!="image/bmp")
 							&&($_FILES['img']['type']!="image/jpg"))
 						{
 							$message="File không đúng định dạng";	
@@ -73,7 +74,7 @@ include('slider.php');
 						}
 						elseif ($_FILES['img']['size']=='') 
 						{
-							$message="Bạn chưa chọn file ảnh";
+							return $message="Bạn chưa chọn file ảnh";
 						}
 						else
 						{
@@ -85,14 +86,14 @@ include('slider.php');
 						$sql="SELECT anh FROM tblsanpham WHERE id={$id}";
 						$query_a=mysqli_query($dbc,$sql);
 						$anhInfo=mysqli_fetch_assoc($query_a);
-						unlink('../'.$anhInfo['anh']);
+						//unlink('../'.$anhInfo['anh']);
 					}
 					//update vao trong db   //anh='{$link_img}',
 					$query="UPDATE tblsanpham
 							SET ten='{$title}',
 								tomtat='{$tomtat}',
 								noidung='{$noidung}',
-								
+								anh='{$link_img}',
 								gia=$gia,
 								donvitinh='{$donvitinh}',
 								danhmucsanpham=$dmsp
@@ -157,11 +158,23 @@ include('slider.php');
 				<label style="display:block;">Nội dung</label>
 				<textarea id="noidung" name="noidung" style="Width:100%;height:150px;"><?php if(isset($noidung)){ echo $noidung;} ?></textarea>
 			</div>
-			<!--<div class="form-group">
+			<!---->
+			<div class="form-group">
 				<label>Ảnh đại diện</label>
-				<input type="file" name="anhdd" value="../<?php echo $link_img; ?>">
-				<p><img width="100" src="<?php echo $anh; ?>"></p>
-			</div>-->
+				<div class="upload-button">
+					<label for="upload_image_input">Chọn ảnh đại diện</label>
+					<input id="upload_image_input" type="file" name="img" value="" />
+					<span class="file-name"></span>
+				</div>
+				<script type="text/javascript">
+					$("#upload_image_input").on("change", function(e){
+						var newFileName=e.target.files[0].name;
+						$(".file-name").text(newFileName);
+					});
+				</script>
+
+				<input type="hidden" name="anhdd" value="<?=$link_img?>"/>
+			</div>
 			<div class="form-group">
 				<label>Giá</label>
 				<input type="text" name="gia" value="<?php if(isset($gia)){echo $gia;} ?>" class="form-control" placeholder="Gia">
