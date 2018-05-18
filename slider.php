@@ -29,11 +29,11 @@
 				if(isset($_POST['txtTuKhoa']))
 					$tukhoa=$_POST['txtTuKhoa'];
 				else
-					$tukhoa="Searchbox";
+					$tukhoa="";
 			?>	
 			<div class="Searchbox">
-				<form action="sanpham_1.php" name="frmthongtin" method="POST" >
-					<input class="aaa" type="text" name="txtTuKhoa"  value placeholder="Nhập từ khóa">
+				<form action="sanpham_1.php" name="frmthongtin" method="POST">
+					<input class="aaa" type="text" name="txtTuKhoa">
 					<?php selectCtrl('parent','forFormdim'); ?>
 					<?php /*<input class="bbb" type="date" name="">
 					<input class="bbb" type="date" name="">*/?>
@@ -45,7 +45,6 @@
 					<link rel="stylesheet" href="/resources/demos/style.css">
 					<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 					<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-					
 					<script>
 					  $( function() {
 					    $( "#slider-range" ).slider({
@@ -65,8 +64,8 @@
 					<body>
 					 
 					<p>
-					  <label class="aaa" for="amount">Khoảng Giá:</label>
-					  <input class="width_bar" id="amount" readonly style="border:0; color:#FF0066	; ">
+					  <label class="aaa" for="amount">Giá:</label>
+					  <input class="width_bar" id="amount" readonly style="border:0; color:#000000;">
 					</p>
 					 
 					<div id="slider-range"></div>

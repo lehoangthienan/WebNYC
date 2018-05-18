@@ -10,10 +10,10 @@
 	?>
 	<div class="row">
 		<div class="tintuc_item">
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-				
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "  id="left">
+				<?php include('left.php'); ?>	
 			</div>
-			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="center">
 				<div class="box_center">
 					<div class="box_center_top">
 						<div class="box_center_top_l">
@@ -42,7 +42,10 @@
 				else
 				{
 					//Nếu p không có, thì sẽ truy vấn CSDL để tìm xem có bao nhiêu page
-					$query_pg="SELECT COUNT(id) FROM tblsanpham WHERE danhmucsanpham=".$dm."";
+					if($dm==1)
+						$query_pg="SELECT COUNT(id) FROM tblsanpham WHERE (danhmucsanpham=4 OR danhmucsanpham=3) AND status='0'";
+					else
+						$query_pg="SELECT COUNT(id) FROM tblsanpham WHERE danhmucsanpham=".$dm." AND status='0'";
 					$results_pg=mysqli_query($dbc,$query_pg);
 					kt_query($results_pg,$query_pg);
 					list($record)=mysqli_fetch_array($results_pg,MYSQLI_NUM);
@@ -55,7 +58,10 @@
 						$per_page=1;
 					}
 				}
-				$query="SELECT * FROM tblsanpham WHERE danhmucsanpham=".$dm." ORDER BY id DESC LIMIT {$start},{$limit}";
+				if($dm==1)
+					$query="SELECT * FROM tblsanpham WHERE (danhmucsanpham=4 OR danhmucsanpham=3) AND status='0' ORDER BY thoigian DESC LIMIT {$start},{$limit}";
+				else 
+				$query="SELECT * FROM tblsanpham WHERE danhmucsanpham=".$dm." AND status='0' ORDER BY thoigian DESC LIMIT {$start},{$limit}";
 				$results=mysqli_query($dbc,$query);
 				kt_query($results,$query);
 				while($sanpham=mysqli_fetch_array($results,MYSQLI_ASSOC))

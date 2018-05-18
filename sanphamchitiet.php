@@ -48,25 +48,119 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 						<div class="canle"><?php echo $dm_info['tomtat']; ?></div>
 						<div class="canle"><?php echo $dm_info['noidung']; ?></div>
 					</div>
+					<h2>Bình Luận</h2>
+					<?php
+					if(isset($_SESSION['admin']))
+					{
+						if($_SERVER['REQUEST_METHOD']=='POST')
+						{
+							$errors=array();
+							if(empty($_POST['binhluan']))
+							{
+								$errors[]='binhluan';
+							}
+							else
+							{
+								$binhluan=$_POST['binhluan'];
+							}
+							$idnguoidang=$_SESSION['uid'];
+							if(empty($errors))
+							{
+	
+								//inser vao trong db
+								$query="INSERT INTO tblbinhluansp(iduser,idbaiviet,binhluan,ngaydang,giodang)
+										VALUES($idnguoidang,$id,'{$binhluan}',NOW(),NOW())";
+								$results=mysqli_query($dbc,$query);
+								kt_query($results,$query);
+								if(mysqli_affected_rows($dbc)==1)
+								{
+									echo "<p style='color:green;'>Bình luận thành công</p>";
+								}
+								else
+								{
+									echo "<p style='required'>Bình luận không thành công</p>";
+								}					
+								$_POST['binhluan']='';
+							}
+							else
+							{
+								$message="<p class='required'>Bạn hãy nhập bình luận</p>";
+							}
+						}
+					?>
+					<form name="frmbaiviet" method="POST" enctype="multipart/form-data">
+						<?php 
+							if(isset($message))
+							{
+								echo $message;
+							}
+						?>						
+						<div class="form-group">
+							<label style="display:block;">Bình Luận</label>
+							<textarea name="binhluan" style="Width:80%;height:30px;"></textarea>
+						</div>
+						<input type="submit" name="submit" class="btn btn-primary" value="Bình Luận">
+					</form>
 					
 					<?php
-					if(isset($_POST["dang_bai"])) {
-						
-						$query="UPDATE `tblsanpham` SET `status` = '1' WHERE `tblsanpham`.`id` = {$id}; ";
-						$results=mysqli_query($dbc,$query);
-						kt_query($results,$query);
-						
+					$query="SELECT * FROM tblbinhluansp,tbluser WHERE tblbinhluansp.iduser=tbluser.id AND 		tblbinhluansp.idbaiviet={$id}";
+					$results=mysqli_query($dbc,$query);
+					kt_query($results,$query);
+					while($binhluan=mysqli_fetch_array($results,MYSQLI_ASSOC))
+					{
+					?>
+					<div><?php echo $binhluan['hoten']; ?> : <?php echo $binhluan['binhluan'];   ?>
+						<?php 
+								$ng_dang=explode('-',$binhluan['ngaydang']);
+								$ngaydang_ct=$ng_dang[2].'-'.$ng_dang[1].'-'.$ng_dang[0];
+							?>
+							Ngày đăng:&nbsp;<?php echo $ngaydang_ct; ?> | <?php echo $binhluan['giodang']; ?>
+					</div>
+					<?php
 					}
 
-					echo '
-					<form method="POST">
+					
+						//<?php
+						if(isset($_POST["dang_bai"])) {
+							
+							$query="UPDATE `tblsanpham` SET `status` = '1' WHERE `tblsanpham`.`id` = {$id}; ";
+							$results=mysqli_query($dbc,$query);
+							kt_query($results,$query);
+							
+						}
+						if($_SESSION['uid']==$dm_info['idnguoidang'])
+						{
+						echo '
+						<form method="POST">
 
-					<input class="sanpham_box_order" type="submit" name="dang_bai" class="btn btn-primary" value="Ẩn bài đăng">
-					</form>
+						<input class="sanpham_box_order" type="submit" name="dang_bai" class="btn btn-primary" value="Ẩn bài đăng">
+						</form>
 
-					';
+						';
+						?>
+						<a href="edit_sanpham.php?id=<?php echo $dm_info['id'];?>" class="sanpham_box_order">Sửa bài đăng</a>
+						<?php
+						}
+						if($_SESSION['admin']==1)
+						{
+							if(isset($_POST["daytin"])) {
+								
+								$query="UPDATE tblsanpham SET thoigian = ADDDATE(NOW(), INTERVAL 1 DAY) WHERE id = {$id} ";
+								$results=mysqli_query($dbc,$query);
+								kt_query($results,$query);
+								
+							}
+
+							echo '
+							<form method="POST">
+
+							<input class="sanpham_box_order" type="submit" name="daytin" class="btn btn-primary" value="Đẩy tin">
+							</form>
+
+							';
+						}
+					}
 					?>
-					  </script>
 				</div>
 			</div>
 		</div>

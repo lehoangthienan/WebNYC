@@ -9,15 +9,12 @@ include('slider.php');
 	<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" id="center">
 		<div class="box_center">
 			<div class="box_center_top">
-				<div class="box_center_top_l"><p>Sản phẩm</p></div>
+				<div class="box_center_top_l"><p>Sản phẩm bị ẩn</p></div>
 				<div class="box_center_top_r"></div>
 				<div class="clearfix"></div>	
 			</div>
 
 			<div class="box_center_main">
-				<div>
-					<a href="add_sanpham.php" class="sanpham_box_themsp"> Thêm Sản Phẩm </a>
-				</div>
 				<div class="row">
 					<?php
 						//đặt số bản ghi cần hiện thị

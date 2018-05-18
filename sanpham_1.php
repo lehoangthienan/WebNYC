@@ -16,7 +16,12 @@ include('slider.php');
 
 			<div class="box_center_main">
 				<div>
+					<?php
+					if(isset($_SESSION['admin']))
+					{
+					?>
 					<a href="add_sanpham.php" class="sanpham_box_themsp"> Thêm Sản Phẩm </a>
+					<?php } ?>
 				</div>
 				<div class="row">
 					<?php
@@ -51,7 +56,7 @@ include('slider.php');
 								$per_page=1;
 							}
 						} 
-						$query="SELECT * FROM tblsanpham WHERE ten LIKE '%{$tukhoa}%' AND status='0' ORDER BY id DESC LIMIT {$start},{$limit}";
+						$query="SELECT * FROM tblsanpham WHERE ten LIKE '%{$tukhoa}%' AND status='0' ORDER BY thoigian DESC LIMIT {$start},{$limit}";
 						$results=mysqli_query($dbc,$query);
 						kt_query($results,$query);
 						while($sanpham=mysqli_fetch_array($results,MYSQLI_ASSOC))

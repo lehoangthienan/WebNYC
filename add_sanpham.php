@@ -36,6 +36,7 @@ include('slider.php');
 				$noidung=$_POST['noidung'];
 				$donvitinh=$_POST['donvitinh'];
 				$gia=$_POST['gia'];
+				$idnguoidang=$_SESSION['uid'];
 				//$status=$_POST['status'];
 				if(empty($errors))
 				{
@@ -43,6 +44,7 @@ include('slider.php');
 					if(($_FILES['img']['type']!="image/gif")
 						&&($_FILES['img']['type']!="image/png")
 						&&($_FILES['img']['type']!="image/jpeg")
+						&&($_FILES['img']['type']!="image/bmp")
 						&&($_FILES['img']['type']!="image/jpg"))
 					{
 						$message="File không đúng định dạng";	
@@ -64,8 +66,8 @@ include('slider.php');
 
 					
 					//inser vao trong db
-					$query="INSERT INTO tblsanpham(ten,tomtat,noidung,anh,gia,donvitinh,ngaydang,giodang, 	danhmucsanpham)
-							VALUES('{$title}','{$tomtat}','{$noidung}','{$link_img}',$gia,'{$donvitinh}',NOW(),NOW(),$dmsp)";
+					$query="INSERT INTO tblsanpham(ten,tomtat,noidung,anh,gia,donvitinh,ngaydang,giodang, 	danhmucsanpham,thoigian,idnguoidang)
+							VALUES('{$title}','{$tomtat}','{$noidung}','{$link_img}',$gia,'{$donvitinh}',NOW(),NOW(),$dmsp,NOW(),$idnguoidang)";
 					$results=mysqli_query($dbc,$query);
 					kt_query($results,$query);
 					if(mysqli_affected_rows($dbc)==1)
