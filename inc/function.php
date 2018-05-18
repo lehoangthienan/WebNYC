@@ -33,7 +33,50 @@ function LocDau($str)
     $str = preg_replace("/;/", '', $str);  
 	return strtolower($str);
 }
+function menu($a,$parent_id=0,$dem=0)
+{
+	global $dbc;
+	$cate_child=array();
+	$query_dq_mn="SELECT * FROM tbldanhmucsanpham WHERE parent_id=".$parent_id." AND menu=1 ORDER BY ordernum DESC";
+	$categories_mn=mysqli_query($dbc,$query_dq_mn);
+	while ($category_mn=mysqli_fetch_array($categories_mn,MYSQLI_ASSOC))
+	{
+		$cate_child[]=$category_mn;	
+	}	
+	if($cate_child)
+	{
+		
+		if($dem==0)
+		{
+			echo "<ul class='sf-menu' id='example'>";
+			echo "<li><a href='http://localhost/webnyc/'>Trang Chủ</a></li>";
+			echo "<li><a href='topview.php'>Top lượt xem</a></li>";
+		}		
+		else
+		{
+			echo "<ul>";
+		}
+	
+		foreach ($cate_child as $key => $item) 
+		{	
+			echo "<li><a href='tinbycategory_1.php?dm=".$item['id']."'>".$item['danhmucsanpham']."</a>";
+			menu($item['id'],++$dem);			
+			echo "</li>";			
+		}
+		if(count($cate_child)==$dem)
+		{	
+			echo "<li><a href='sanpham_1.php'>Tất cả sản phẩm</a></li>";
+			if($a==1)
+				echo "<li><a href='sanphambian.php'>Sản phẩm bị ẩn</a></li>";
+			echo "<li><a href='gocthantho.php'>Góc than thở</a></li>";		
+			echo "<li><a href='lienhe.php'>Liên hệ</a></li>";
+			if($a==0)
+				echo "<li><a href='trangcanhan.php'>Trang Cá Nhân</a></li>";
+		}	
+		echo "</ul>";
+	}	
 
+}
 function menu_dacap($parent_id=0,$dem=0)
 {
 	global $dbc;
@@ -46,16 +89,18 @@ function menu_dacap($parent_id=0,$dem=0)
 	}	
 	if($cate_child)
 	{
+		
 		if($dem==0)
 		{
 			echo "<ul class='sf-menu' id='example'>";
+			echo "<li><a href='http://localhost/webnyc/'>Trang Chủ</a></li>";
+			echo "<li><a href='topview.php'>Top lượt xem</a></li>";
 		}		
 		else
 		{
 			echo "<ul>";
 		}
 	
-		echo "<li><a href='http://localhost/webnyc/'>Trang Chủ</a></li>";		
 		foreach ($cate_child as $key => $item) 
 		{	
 			echo "<li><a href='tinbycategory_1.php?dm=".$item['id']."'>".$item['danhmucsanpham']."</a>";
@@ -64,7 +109,9 @@ function menu_dacap($parent_id=0,$dem=0)
 		}
 		if(count($cate_child)==$dem)
 		{	
-			echo "<li><a href='sanpham_1.php'>Tất cả sản phẩm</a></li>";		
+			echo "<li><a href='sanpham_1.php'>Tất cả sản phẩm</a></li>";
+			echo "<li><a href='sanphambian.php'>Sản phẩm bị ẩn</a></li>";
+			echo "<li><a href='gocthantho.php'>Góc than thở</a></li>";		
 			echo "<li><a href='lienhe.php'>Liên hệ</a></li>";
 		}	
 		echo "</ul>";
