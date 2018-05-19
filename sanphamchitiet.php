@@ -41,7 +41,8 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 					<div class="baiviet_ct">
 						
 						<div class="bvsanpham_box_img_container">
-							<img src="<?php echo $dm_info['anh']; ?>"/>
+							<img src="<?php echo $dm_info['anh']; ?>" class="image"/>
+							<div class="overlay">Liên Hệ Tôi Ngay</div>
 						</div>
 						<div class="bvsanpham_box_detail_container">
 							<h2><?php echo $dm_info['ten']; ?></h2>
@@ -50,7 +51,7 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 							<div class="canle"><?php echo $dm_info['noidung']; ?></div>
 						</div>
 					</div>
-					<h2>Bình Luận</h2>
+					<h2>Nhận xét về sản phẩm</h2>
 					<?php
 					if(isset($_SESSION['admin']))
 					{
@@ -111,12 +112,18 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 					while($binhluan=mysqli_fetch_array($results,MYSQLI_ASSOC))
 					{
 					?>
-					<div><?php echo $binhluan['hoten']; ?> : <?php echo $binhluan['binhluan'];   ?>
+					<div class="framebinhluan">
+					<div>
+						<div class="framehoten"><?php echo $binhluan['hoten']; ?></div> :
+						<div class="framenoidungbinhluan"> <?php echo $binhluan['binhluan'];   ?></div> 
+					</div>
 						<?php 
 								$ng_dang=explode('-',$binhluan['ngaydang']);
 								$ngaydang_ct=$ng_dang[2].'-'.$ng_dang[1].'-'.$ng_dang[0];
 							?>
+							
 							Ngày đăng:&nbsp;<?php echo $ngaydang_ct; ?> | <?php echo $binhluan['giodang']; ?>
+							
 					</div>
 					<?php
 					}

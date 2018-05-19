@@ -6,7 +6,7 @@ $dm_info=mysqli_fetch_assoc($query_a);
 ?>
 <div class="box">
      <div class="box_top">
-     	<p>Thông Tin Cá Nhân</p>
+     	<p>Chi Tiết Người Bán</p>
      </div>
      <div class="box_main">
      	<h3 class="sanpham_box_gia" ><?php echo $dm_info['hoten']; ?></h3>

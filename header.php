@@ -29,6 +29,7 @@ if(!isset($_SESSION['uid']))
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	</head>
 	<body>
+	<div class="TopContainer" class="background-color:lightgray">
 		<div class="container">
 			<div class="row">
                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" id="header">
