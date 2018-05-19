@@ -17,8 +17,7 @@ if(!isset($_SESSION['uid']))
 		<link rel="stylesheet" type="text/css" href="css/upload.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<script type="text/javascript" src="js/jquery1.js"></script>
-		<script type="text/javascript" src="js/jquery.js"></script>
+		
 		<script type="text/javascript" src="js/wowslider.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript" src="js/superfish.js"></script>
@@ -56,8 +55,10 @@ if(!isset($_SESSION['uid']))
                  			?>
                  			<ul class="nav navbar-right top-nav">
 	                 			<li class="dropdown">
-				                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Xin chào:&nbsp;<?php if(isset($_SESSION['hoten'])) {echo $_SESSION['hoten']; } ?> <b class="caret"></b></a>
-				                    <ul class="dropdown-menu">
+				                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenuLogin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				                    	<i class="fa fa-user"></i> Xin chào:&nbsp;<?php if(isset($_SESSION['hoten'])) {echo $_SESSION['hoten']; } ?> <b class="caret"></b>
+				                    </a>
+				                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLogin">
 				                        <li>
 				                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
 				                        </li>                        

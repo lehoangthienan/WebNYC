@@ -5,8 +5,7 @@ body
 }
 #header
 {
-	position: relative;
-	height:120px;	
+	position: relative;	
 }
 #menu
 {
@@ -302,6 +301,9 @@ body
 	display: flex;
 	padding: 5px 10px;
 }
+.baiviet_ct{
+	overflow: hidden;
+}
 .sanpham_box_img_container{
 	flex: 0;
 	width: 200px;
@@ -313,12 +315,17 @@ body
 }
 .bvsanpham_box_img_container{
 	flex: 0;
-	width: 400px;
+	width: 50%;
 	margin-right: 10px;
+	float: left;
 }
 .bvsanpham_box_img_container img {
-	width: 400px;
+	width: 100%;
 	height:100%;
+}
+.bvsanpham_box_detail_container{
+	float: left;
+	width: calc(50% - 10px);
 }
 .sanpham_box_detail{
 	flex: 1;
@@ -380,10 +387,13 @@ body
 	cursor: pointer;
 	line-height:40px;
 	text-align: center;
-	color:#FF8C00;
-	background:#1b926c;
+	color:#888888;
+	background:#FF00CC;
 	font-size:20px;
 	display: block;
+	-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+	
 }
 .sanpham_box_themsp
 {

@@ -19,8 +19,7 @@
      <div class="box_main">
      	<div id="video">
         	<div id="content_video">
-                <?php //<iframe width="100%" src="https://www.youtube.com/embed/Aj3HsW7cmIw?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> ?>
-                <iframe width="100%" src="https://www.youtube.com/embed/Aj3HsW7cmIw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="100%" src="https://www.youtube.com/embed/Aj3HsW7cmIw?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 			</div>
 			<div class="clearfix"></div>
@@ -39,7 +38,7 @@
                 while ($tin_n=mysqli_fetch_array($results_moi,MYSQLI_ASSOC)) 
                 {
                 ?>
-                <li><a href="<?php echo $tin_n['id'] ?>-<?php echo LocDau($tin_n['ten']); ?>.html" title="<?php echo $tin_n['ten']; ?>"><?php echo $tin_n['ten']; ?></a></li>
+                <li><a href="sanphamchitiet.php?id=<?php echo $tin_n['id'];?>" title="<?php echo $tin_n['ten']; ?>"><?php echo $tin_n['ten']; ?></a></li>
                 <?php
                 }
             ?>          

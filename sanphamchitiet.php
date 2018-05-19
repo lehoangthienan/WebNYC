@@ -43,10 +43,12 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 						<div class="bvsanpham_box_img_container">
 							<img src="<?php echo $dm_info['anh']; ?>"/>
 						</div>
-						<h2><?php echo $dm_info['ten']; ?></h2>
-						<div class="sanpham_box_gia">Giá:&nbsp;<?php echo number_format($dm_info['gia'],0,'.','.').'&nbsp;'.$dm_info['donvitinh']; ?></div>
-						<div class="canle"><?php echo $dm_info['tomtat']; ?></div>
-						<div class="canle"><?php echo $dm_info['noidung']; ?></div>
+						<div class="bvsanpham_box_detail_container">
+							<h2><?php echo $dm_info['ten']; ?></h2>
+							<div class="sanpham_box_gia">Giá:&nbsp;<?php echo number_format($dm_info['gia'],0,'.','.').'&nbsp;'.$dm_info['donvitinh']; ?></div>
+							<div class="canle"><?php echo $dm_info['tomtat']; ?></div>
+							<div class="canle"><?php echo $dm_info['noidung']; ?></div>
+						</div>
 					</div>
 					<h2>Bình Luận</h2>
 					<?php
@@ -101,8 +103,8 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 						</div>
 						<input type="submit" name="submit" class="btn btn-primary" value="Bình Luận">
 					</form>
-					
 					<?php
+					}
 					$query="SELECT * FROM tblbinhluansp,tbluser WHERE tblbinhluansp.iduser=tbluser.id AND 		tblbinhluansp.idbaiviet={$id}";
 					$results=mysqli_query($dbc,$query);
 					kt_query($results,$query);
@@ -119,8 +121,9 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 					<?php
 					}
 
-					
-						//<?php
+					if(isset($_SESSION['admin']))
+					{
+						
 						if(isset($_POST["dang_bai"])) {
 							
 							$query="UPDATE `tblsanpham` SET `status` = '1' WHERE `tblsanpham`.`id` = {$id}; ";
