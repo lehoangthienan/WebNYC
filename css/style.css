@@ -116,6 +116,7 @@ body
 	padding-bottom:10px;
 	margin-bottom:0;
 }
+
 .tin_row ul
 {
 	list-style:none;
@@ -285,6 +286,58 @@ body
     text-transform: uppercase;
     padding-left:16px;
     padding-right:23px;
+}
+.name
+{
+	color: #c90927;
+	text-align: left;
+	font-size: 15px;
+	font-weight: bold;
+}
+.box_main
+{
+	padding: 09px;
+}
+.warning
+{
+	margin: 5px 0px 0px;
+	padding: 0px 05px 05px 17px !important;
+	font-family: Arial;
+	font-size: 13px;
+}
+.button, #register button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+    margin: 5px;
+    padding: 0 22px;
+    font-size: 15px;
+    font-family: Myriad Pro;
+    height: 40px;
+    line-height: 40px;
+    background-color: #FF6600;
+    color: #FFF;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    text-align: center;
+    overflow: visible;
+    /* text-shadow: 1px 1px 1px rgba(0,0,0,0.2); */
+}
+.adress{
+	background-image: url(.../images/icon-adress.png);
+	color: #black;
+	text-align: left;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: Myriad Pro;
+}
+.share
+{
+	padding: 10px 0px 10px 15px;
 }
 .box_center_top_l a:hover
 {
