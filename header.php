@@ -11,11 +11,10 @@ if(!isset($_SESSION['uid']))
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Xây dựng website</title>
 
-
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/superfish.css">
 		<link rel="stylesheet" type="text/css" href="css/upload.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		
 		<script type="text/javascript" src="js/wowslider.js"></script>
@@ -29,6 +28,14 @@ if(!isset($_SESSION['uid']))
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	</head>
 	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+  			if (d.getElementById(id)) return;
+  			js = d.createElement(s); js.id = id;
+  			js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0';
+  			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 	<div class="TopContainer" class="background-color:lightgray">
 		<div class="container">
 			<div class="row">
