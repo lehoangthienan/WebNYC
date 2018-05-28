@@ -3,6 +3,10 @@ $id=$_GET['id'];
 $sql="SELECT tbluser.* FROM tblsanpham,tbluser WHERE tblsanpham.idnguoidang=tbluser.id and tblsanpham.id={$id}";
 $query_a=mysqli_query($dbc,$sql);
 $dm_info=mysqli_fetch_assoc($query_a);
+$idnd=$dm_info['id'];
+$sql1="SELECT COUNT(tblsanpham.id) AS sbd FROM tblsanpham,tbluser WHERE tblsanpham.idnguoidang=tbluser.id and tblsanpham.idnguoidang={$idnd}";
+$query_b=mysqli_query($dbc,$sql1);
+$dm_info1=mysqli_fetch_assoc($query_b);
 ?>
 <div class="box">
      <div class="box_top">
@@ -22,7 +26,7 @@ $dm_info=mysqli_fetch_assoc($query_a);
           <div class="detail-adress">
                <span> <i class="fas fa-address-book" aria-hidden="true"></i>
                <snap class="adress-label">Địa chỉ:</snap>
-               <snap class="adress"> 284 Lý Thường Kiệt, Phường 14, Quận 10, Hồ Chí Minh. </snap>
+               <snap class="adress"> <?php echo $dm_info['diachi']?> </snap>
           </div>
           <div class="detail-date-of-participation">
                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
@@ -32,7 +36,7 @@ $dm_info=mysqli_fetch_assoc($query_a);
           <div class="detail-sobaidang">
                <i class="fas fa-pencil-alt"></i>               
                <snap class="sobaidang-label">Số bài đăng bán:</snap>
-              <!--  <snap class="adress"> ?php echo $dm_info['sobaidang']?></snap> -->
+               <snap class="adress"> <?php echo $dm_info1['sbd']?></snap>
           </div>
      </div>
 </div>
