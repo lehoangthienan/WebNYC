@@ -1,7 +1,7 @@
 <div class="Searchbox">
-				<form action="sanpham_1.php" name="frmthongtin" method="POST"class="formInput">
+				<form action="sanpham_1.php" name="frmthongtin" method="POST">
 					<input class="aaa" type="text" name="txtTuKhoa">
-					<?php selectCtrl('parent','forFormdim'); ?>
+					<?php selectCtrl('parent','btn-group bootstrap-select'); ?>
 					<?php /*<input class="bbb" type="date" name="">
 					<input class="bbb" type="date" name="">*/?>
 					<?php
@@ -17,8 +17,8 @@
 					    $( "#slider-range" ).slider({
 					      range: true,
 					      min: 0,
-					      max: 3000,
-					      values: [ 200, 1000 ],
+					      max: 1000,
+					      values: [ 10, 1000 ],
 					      slide: function( event, ui ) {
 					        $( "#amount" ).val(ui.values[ 0 ]+"0.000-"+ ui.values[ 1 ]+"0.000 VNĐ");
 					      }
@@ -31,8 +31,8 @@
 					<body>
 					 
 					<p>
-					  <label class="aaa" for="amount">Giá:</label>
-					  <input class="width_bar" id="amount" readonly style="border:0; color:#000000;">
+					  <label class="gia" for="amount">Giá:</label>
+					  <input class="width_bar" id="amount" name="amount" readonly style="border:0; color:greenyellow;">
 					</p>
 					 
 					<div id="slider-range"></div>
@@ -71,6 +71,10 @@
 					$tukhoa=$_POST['txtTuKhoa'];
 				else
 					$tukhoa="";
+						if(isset($_POST['amount']))
+					$amount1=$_POST['amount'];
+				else
+					$amount1="";
 			?>	
 			
 		</div>

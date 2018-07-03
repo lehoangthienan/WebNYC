@@ -2,6 +2,27 @@
 include('header.php');
 include('slider.php');
 ?>
+
+<?php
+//ob_start(); 
+$minTien = 0;
+$maxTien = 100000000;
+// if(isset($_GET['amount'])){
+// 	$valuexnxx = $_GET['amount'];
+if(!empty($amount1)){
+	$valuexnxx = $amount1;
+	var_dump($valuexnxx);
+	$valuexnxx = str_replace(".", "", $valuexnxx);
+	$data=explode("-", $valuexnxx);
+	$minTien=$data[0];
+	$max=$data[1];
+	
+	$data1 = explode(" VNĐ", $max);
+	$maxTien = $data1[0];
+	
+}
+?>
+
 <div class="row">
 	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id="left">
 		<?php include('left.php'); ?>	
@@ -43,7 +64,7 @@ include('slider.php');
 						else
 						{
 							//Nếu p không có, thì sẽ truy vấn CSDL để tìm xem có bao nhiêu page
-							$query_pg="SELECT COUNT(id) FROM tblsanpham WHERE ten LIKE '%{$tukhoa}%'  AND status='0'";
+							$query_pg="SELECT COUNT(id) FROM tblsanpham WHERE ten LIKE '%{$tukhoa}%' AND ((gia >= '$minTien')AND(gia<='$maxTien')) AND status='0'";
 							$results_pg=mysqli_query($dbc,$query_pg);
 							kt_query($results_pg,$query_pg);
 							list($record)=mysqli_fetch_array($results_pg,MYSQLI_NUM);
@@ -56,7 +77,7 @@ include('slider.php');
 								$per_page=1;
 							}
 						} 
-						$query="SELECT * FROM tblsanpham WHERE ten LIKE '%{$tukhoa}%' AND status='0' ORDER BY thoigian DESC LIMIT {$start},{$limit}";
+						$query="SELECT * FROM tblsanpham WHERE ten LIKE '%{$tukhoa}%' AND ((gia >= '$minTien')AND(gia<='$maxTien')) AND status='0' ORDER BY thoigian DESC LIMIT {$start},{$limit}";
 						$results=mysqli_query($dbc,$query);
 						kt_query($results,$query);
 						while($sanpham=mysqli_fetch_array($results,MYSQLI_ASSOC))

@@ -51,12 +51,12 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 							<div class="canle2"><?php echo $dm_info['noidung']; ?></div>
 							
 							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-							<!-- <button id="demo" onclick="myFunction()" class="btnlienhengay"><i class="fa fa-mobile"></i> Liên Hệ Tôi Ngay</button> -->
+							
 <!--							<p id="demo"></p>-->
 							<script>
-								// function myFunction() {
-								// 	document.getElementById("demo").innerHTML = "0985637412";
-								// }
+								//function myFunction() {
+								//	document.getElementById("demo").innerHTML = "0985637412";
+								//}
 								</script>
 						</div>
 					</div>
@@ -133,8 +133,7 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 							
 							Ngày đăng:&nbsp;<?php echo $ngaydang_ct; ?> | <?php echo $binhluan['giodang']; ?>
 							
-					</div>
-					<?php
+								<?php
 					if(isset($_SESSION['admin']))
 					{
 						if($_SESSION['admin']==1||$_SESSION['uid']==$binhluan['iduser'])
@@ -181,8 +180,11 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 					<?php
 						}
 					}
-					}
+					?>
 
+					</div>
+			        <?php
+					}
 					if(isset($_SESSION['admin']))
 					{
 						
