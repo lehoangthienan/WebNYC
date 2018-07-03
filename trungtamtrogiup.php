@@ -20,7 +20,6 @@ include('header.php');
 <li>Tiêu đề cần thể hiện chi tiết chính của mặt hàng hoặc dịch vụ được quảng cáo, bao gồm các thông tin như:
 <ul>
 <li>Tên sản phẩm, model, tình trạng …. (Ví dụ: Iphone 5S 16gb còn bảo hành …)</li>
-<li>Loại nhà đất, tên đường, số phòng ngủ… (đối với bất động sản). Ví dụ: Nhà 3 lầu 6 phòng ngủ đường Nguyễn Trãi …)</li>
 </ul>
 </li>
 <li>Trên tiêu đề tin, không sử dụng các thông tin/ từ ngữ sau:
@@ -39,20 +38,19 @@ include('header.php');
 <li>Hình đã bị chỉnh sửa quá nhiều hoặc bị tẩy xóa, không cho thấy được tình trạng thật của sản phẩm.</li>
 <li>Hình có chứa đường link liên kết, chữ, số điện thoại, tên cửa hàng/công ty.</li>
 <li>Hình mờ, nghiêng, không đúng chiều, hình được ghép từ nhiều hình khác, có các ký tự hoặc ký hiệu lạ nhằm thu hút sự chú ý của người xem.</li>
-<li>Hình có logo công ty, ngoại trừ trong các chuyên mục “Dịch Vụ”, “Việc Làm” và hoạt động mua bán thương hiệu trong chuyên mục “Cơ sở thương mại”.</li>
+<li>Hình có logo công ty và hoạt động mua bán thương hiệu trong chuyên mục “Cơ sở thương mại”.</li>
 <li>Hình người mẫu mặc đồ lót, đồ bơi.</li>
 <li>Hình bị lỗi không hiển thị.</li>
 </ul>
 <h4><span id="4-noi-dung-tin-dang"><strong>4. Nội dung tin đăng</strong></span></h4>
 <p>Nội dung tin đăng cần có đầy đủ thông tin để người mua có thể quyết định mua hàng. Cụ thể như sau:</p>
 <ul>
-<li><em>Bất động sản</em>: Miêu tả chi tiết vị trí, số phòng, diện tích, tên dự án, căn hộ, tên đường, tình trạng sở hữu, …</li>
 <li><em>Xe cộ</em>: Miêu tả tên xe, hãng xe, xuất xứ, màu sắc, tình trạng sử dụng, số km đã đi, năm đăng kí, hộp số, loại nhiên liệu, giấy tờ xe, …</li>
 <li><em>Các sản phẩm khác</em>: Tên sản phẩm, hãng, xuất xứ, màu sắc, chất liệu, tình trạng sử dụng, phụ kiện đi kèm, giá tiền, tình trạng bảo hành, …</li>
 </ul>
 <p>Số điện thoại, các đường dẫn kết nối đến trang khác, email có chứa tên miền website khác không được phép miêu tả ở nội dung.</p>
 <p>Nếu có nhiều hơn một sản phẩm/dịch vụ, vui lòng đăng tin riêng biệt cho từng sản phẩm/dịch vụ.</p>
-<p>NYCSTORE chỉ đăng những tin mua bán 1 sản phẩm hoặc dịch vụ cụ thể. Tin rao chỉ nhằm mục đích quảng cáo về công ty sẽ không được đăng. Các tin rao không nhằm mục đích mua bán không được đăng.</p>
+<p>NYCSTORE chỉ đăng những tin mua bán 1 sản phẩm. Tin rao chỉ nhằm mục đích quảng cáo về công ty sẽ không được đăng. Các tin rao không nhằm mục đích mua bán không được đăng.</p>
 <p>Các tin đăng có nội dung, hình ảnh mang tính xúc phạm liên quan đến tôn giáo, các nhóm sắc tộc, cá nhân hoặc người nổi tiếng bị cấm.</p>
 <p>Theo điều 8 mục 11 của Luật Quảng cáo, không được sử dụng các từ ngữ <em>“nhất”, “duy nhất”, “tốt nhất”, “số một”</em> hoặc từ ngữ có ý nghĩa tương tự trong nội dung tin đăng (nếu sử dụng phải có tài liệu chứng minh).</p>
 <h4><span id="5-gia"><strong>5. Giá</strong></span></h4>
@@ -77,9 +75,6 @@ include('header.php');
 <ul>
 <li style="font-weight: 400;"><span style="font-weight: 400;">Dùng một hoặc nhiều tài khoản khác nhau để rao bán cùng 1 sản phẩm (kể cả đã ẩn tin &nbsp;rao trước đó và tiến hành đăng lại).</span></li>
 <li style="font-weight: 400;"><span style="font-weight: 400;">Dùng một hoặc nhiều tài khoản khác nhau để đăng bán các sản phẩm gần giống nhau, có cùng mẫu mã.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Dùng một hoặc nhiều tài khoản khác nhau để đăng tin tuyển dụng các công việc có tính chất tương tự nhau.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Dùng một hay nhiều tài khoản để rao bán các căn hộ chung cư trong cùng 1 dự án.</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Dùng một hay nhiều tài khoản để rao bán các mảnh đất khác nhau trên cùng 1 con đường.</span></li>
 <li style="font-weight: 400;"><span style="font-weight: 400;">Dùng một hay nhiều hình ảnh đã đăng tin trước đó để đăng lại tin mới.</span></li>
 </ul>
 
@@ -143,14 +138,13 @@ include('header.php');
 <li><span style="font-weight: 400;">Các tin chỉ quảng cáo về công ty &amp; mặt hàng 1 cách chung chung (tin quảng bá đơn thuần), hoặc chỉ nêu báo giá/ liệt kê các mặt hàng mà không miêu tả, sẽ không được đăng.</span></li>
 </ul>
 <p>Bạn có thể tham khảo thêm quy định về <strong>Nội dung tin đăng</strong> ở mục <strong>Quy định cơ bản của tin đăng</strong>.</p>
-<h4><span id="12-tin-dang-co-nhieu-mat-hangdich-vuvi-tri-tuyen-dung"><strong>13. Tin đăng có nhiều mặt hàng/dịch vụ/vị trí tuyển dụng</strong></span></h4>
+<h4><span id="12-tin-dang-co-nhieu-mat-hangdich-vu"><strong>13. Tin đăng có nhiều mặt hàng/dịch vụ</strong></span></h4>
 <p>Để người mua tìm thấy thông tin của bạn 1 cách dễ dàng nhất, <strong>NYCSTORE </strong>quy định:</p>
 <ul>
 <li>Mỗi tin rao vặt chỉ được đăng 1 mặt hàng/dịch vụ cần cung cấp.</li>
 <li>Nếu bạn là <strong>Bán chuyên/Môi giới</strong>&nbsp;&amp; đăng bán 1 mặt hàng có nhiều màu khác nhau, vui lòng chỉ chụp 1 màu sản phẩm trong 1 hình.</li>
 <li>Đối với <em>Xe cộ, </em>xe có màu khác nhau cần đăng trong các tin khác nhau.</li>
 <li>Đối với <em>Bất động sản,</em> mỗi tin chỉ được đăng bán 1 căn nhà/chung cư hoặc 1 dự án.</li>
-<li>Đối với <em>Tuyển dụng,</em> nội dung cần có miêu tả công việc, giới thiệu công ty, yêu cầu về kỹ năng, hồ sơ xin việc và chỉ tuyển 1 vị trí.</li>
 </ul>
 <h4><span id="13-tin-dang-co-gia-ngoai-te"><strong>14. Tin đăng có giá ngoại tệ</strong></span></h4>
 <p>Theo Pháp lệnh Ngoại hối của Nhà nước, mọi tin đăng có giá ngoại tệ đều bị từ chối.</p>
@@ -188,27 +182,6 @@ include('header.php');
 <tr>
 <td style="text-align: center;"><span style="font-weight: 400;">Phụ tùng xe</span></td>
 <td><span style="font-weight: 400;">Gồm các tin đăng mua bán tất cả các loại phụ tùng cho mọi loại xe.</span></td>
-</tr>
-<tr>
-<td style="text-align: center;" rowspan="5"><b>Bất động sản</b></td>
-<td style="text-align: center;"><span style="font-weight: 400;">Căn hộ/Chung cư</span></td>
-<td><span style="font-weight: 400;">Gồm các tin đăng mua bán, cho thuê căn hộ chung cư đã hoàn thiện, có thể dọn vào ở.</span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><span style="font-weight: 400;">Nhà ở</span></td>
-<td><span style="font-weight: 400;">Gồm các tin đăng mua bán, cho thuê cho thuê nhà.</span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><span style="font-weight: 400;">Đất</span></td>
-<td><span style="font-weight: 400;">Gồm các tin đăng mua bán, cho thuê cho thuê đất: đất thổ cư, đất nông nghiệp, …</span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><span style="font-weight: 400;">Văn phòng, Mặt bằng kinh doanh</span></td>
-<td><span style="font-weight: 400;">Gồm các tin đăng mua bán, cho thuê văn phòng, mặt bằng kinh doanh hoặc sang nhượng cửa hàng (bao gồm mặt bằng văn phòng và cơ sở vật chất đã đầu tư)</span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><span style="font-weight: 400;">Phòng trọ</span></td>
-<td><span style="font-weight: 400;">Gồm các tin đăng mua bán, cho thuê cho thuê phòng trọ.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;" rowspan="7"><b>Đồ điện tử</b></td>
@@ -320,19 +293,6 @@ include('header.php');
 <tr>
 <td style="text-align: center;"><span style="font-weight: 400;">Đồ chuyên dụng, Giống nuôi trồng</span></td>
 <td><span style="font-weight: 400;">Gồm các tin đăng mua bán loại sản phẩm chuyên dụng cho từng ngành nghề. Ví dụ: máy pha cà phê chuyên dụng, bàn ghế dùng trong quán cà phê, máy khoan, máy bào,…</span><span style="font-weight: 400;">Và các loại giống dùng để nuôi trồng. Ví dụ: tôm giống, cây giống, …</span></td>
-</tr>
-<tr>
-<td style="text-align: center;" rowspan="3"><b>Việc làm, Dịch vụ</b></td>
-<td style="text-align: center;"><span style="font-weight: 400;">Việc làm</span></td>
-<td><span style="font-weight: 400;">Gồm các tin đăng tuyển dụng, tin đăng tìm việc làm.</span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><span style="font-weight: 400;">Dịch vụ</span></td>
-<td><span style="font-weight: 400;">Gồm các tin đăng cung cấp, cho thuê hoặc cần tìm dịch vụ. Ví dụ: Cho thuê xe du lịch, cung cấp dịch vụ sửa chữa nhà, …</span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><span style="font-weight: 400;">Du lịch</span></td>
-<td><span style="font-weight: 400;">Gồm các tin đăng mua bán các sản phẩm liên quan đến du lịch: tour du lịch, vé tàu, vé xe, vé máy bay, …</span></td>
 </tr>
 <tr>
 <td style="text-align: center;"><b>Các loại khác</b></td>
