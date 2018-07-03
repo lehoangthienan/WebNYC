@@ -83,16 +83,12 @@ include('header.php');
 <li style="font-weight: 400;"><span style="font-weight: 400;">Dùng một hay nhiều hình ảnh đã đăng tin trước đó để đăng lại tin mới.</span></li>
 </ul>
 
-<h4><span id="2-tin-rao-trung-lap-voi-tin-da-an"><strong>2. Tin rao trùng lặp với tin đã ẩn</strong></span></h4>
-<ul>
-<li>Sử dụng chức năng hiển tin đã ẩn trong mục <strong>Quản lý tin đăng</strong> bằng cách nhấn vào <a href="http://trogiup.chotot.com/ban-hang-tai-chotot-vn/quan-ly-tin-dang/hien-tin-da-an/">đây</a> thay vì đăng lại tin mới trong trường hợp bạn muốn bán lại món hàng đã ẩn trước đó.</li>
-</ul>
-<h4><span id="3-su-dung-hinh-tai-tu-tren-mang"><strong>3. Sử dụng hình tải từ trên mạng</strong></span></h4>
+<h4><span id="2-su-dung-hinh-tai-tu-tren-mang"><strong>3. Sử dụng hình tải từ trên mạng</strong></span></h4>
 <ul>
 <li>Tin đăng sử dụng hình tải từ trên mạng sẽ bị từ chối.</li>
 <li>NYCSTORE yêu cầu người bán tự chụp hình mặt hàng khi đăng tin. Việc đăng hình thật thu hút các khách hàng thực sự yêu thích sản phẩm, giúp bạn bán hàng nhanh hơn.</li>
 </ul>
-<h4><span id="4-dang-thieu-hinh-san-pham-hoac-chinh-sua-hinh-anh-qua-nhieu"><strong>4. Đăng thiếu hình sản phẩm; hoặc chỉnh sửa hình ảnh quá nhiều</strong></span></h4>
+<h4><span id="3-dang-thieu-hinh-san-pham-hoac-chinh-sua-hinh-anh-qua-nhieu"><strong>4. Đăng thiếu hình sản phẩm; hoặc chỉnh sửa hình ảnh quá nhiều</strong></span></h4>
 <ul>
 <li>Khách hàng muốn xem nhiều hình trước khi quyết định mua hàng, do đó hãy đăng ít nhất 5-6 hình thật của sản phẩm.
 <ul>
@@ -106,7 +102,7 @@ include('header.php');
 <li>Không thêm chữ, địa chỉ website, logo, số điện thoại trên hình.</li>
 <li>Không sử dụng hình mờ, nghiêng, không đúng chiều, hình được ghép từ nhiều hình khác nhau</li>
 </ul>
-<h4><span id="5-thieu-thong-tin-chi-tiet-khi-mieu-ta-san-pham"><strong>5. Thiếu thông tin chi tiết khi miêu tả sản phẩm</strong></span></h4>
+<h4><span id="4-thieu-thong-tin-chi-tiet-khi-mieu-ta-san-pham"><strong>5. Thiếu thông tin chi tiết khi miêu tả sản phẩm</strong></span></h4>
 <p>Nếu tin đăng của bạn có quá ít thông tin, người mua sẽ không liên lạc với bạn để mua hàng. Đó là lý do tại sao NYCSTORE chỉ cho đăng tin có miêu tả đầy đủ sản phẩm.</p>
 <p>Một số thông tin người mua muốn biết khi mua hàng như sau:</p>
 <ul>
@@ -118,27 +114,27 @@ include('header.php');
 <li>Mặt hàng còn bảo hành và có phụ kiện đi kèm không.</li>
 </ul>
 
-<h4><span id="6-tin-dang-bang-tieng-viet-khong-co-dau"><strong>6. Tin đăng bằng tiếng Việt không có dấu</strong></span></h4>
+<h4><span id="5-tin-dang-bang-tieng-viet-khong-co-dau"><strong>6. Tin đăng bằng tiếng Việt không có dấu</strong></span></h4>
 <ul>
 <li>Tất cả tin đăng trên <strong>NYCSTORE</strong> đều là tiếng Anh hoặc tiếng Việt có đấu.</li>
 <li>Tin đăng bằng tiếng Việt không dấu có thể khiến người mua không hiểu được nội dung bạn viết, hoặc hiểu nhầm ý của bạn.</li>
 </ul>
-<h4><span id="7-tin-dang-co-thong-tin-khong-thong-nhatkhong-hop-ly"><strong>7. Tin đăng có thông tin không thống nhất/không hợp lý</strong></span></h4>
+<h4><span id="6-tin-dang-co-thong-tin-khong-thong-nhatkhong-hop-ly"><strong>7. Tin đăng có thông tin không thống nhất/không hợp lý</strong></span></h4>
 <ul>
 <li>Đối với một tin đăng quảng cáo yêu cầu <strong>thông tin phải thống nhất với nhau</strong>, nội dung và tiêu đề phải quảng cáo chung 1 sản phẩm.</li>
 <li>Hàng hoá/Dịch vụ đã bán hết hoặc hết hạn sử dụng tại thời điểm rao bán hoặc sản phẩm không tồn tại sẽ không được đăng.</li>
 <li>Sản phẩm có giá bán chưa hợp lý (có giá quá rẻ so với giá trên thị trường).</li>
 </ul>
-<h4><span id="8-vuot-qua-so-tin-quang-cao-cho-phep-trong-cung-1-chuyen-muc"><strong>8. Vượt quá số tin quảng cáo cho phép trong cùng 1 chuyên mục</strong></span></h4>
+<h4><span id="7-vuot-qua-so-tin-quang-cao-cho-phep-trong-cung-1-chuyen-muc"><strong>8. Vượt quá số tin quảng cáo cho phép trong cùng 1 chuyên mục</strong></span></h4>
 <p>Theo quy định hiện nay của NYCSTORE, mỗi chuyên mục được đăng tối đa 10 tin khác nhau đối với người dùng <strong>Cá nhân</strong> hoặc 30 tin khác nhau đối với người dùng <strong>Bán chuyên/Môi giới</strong>. Riêng&nbsp;chuyên mục&nbsp;xe máy, ô tô được đăng tin không giới hạn trong cùng chuyên mục.</p>
 <p>Đối với các mặt hàng giá trị cao (<em>Xe cộ, Đồ điện tử, Bất động sản</em>), <strong>Cá nhân</strong> được đăng nhiều nhất 3 tin.</p>
-<h4><span id="9-tin-dang-co-ten-website-tren-hinho-thong-tin-lien-lacnoi-dung"><strong>9. Tin đăng có tên website trên hình/ô thông tin liên lạc/nội dung</strong></span></h4>
+<h4><span id="8-tin-dang-co-ten-website-tren-hinho-thong-tin-lien-lacnoi-dung"><strong>9. Tin đăng có tên website trên hình/ô thông tin liên lạc/nội dung</strong></span></h4>
 <p>Tại <strong>NYCSTORE</strong> không cho phép đăng bất kỳ đường dẫn liên kết (link website) nào xuất hiện trong tin đăng, trên hình ảnh, nội dung hoặc thông tin liên lạc.</p>
-<h4><span id="10-tin-dang-co-so-dien-thoaidia-chi-email-trong-o-ten-hoac-trong-noi-dung-tin"><strong>10. Tin đăng có số điện thoại/địa chỉ email trong ô tên hoặc trong nội dung tin</strong></span></h4>
+<h4><span id="9-tin-dang-co-so-dien-thoaidia-chi-email-trong-o-ten-hoac-trong-noi-dung-tin"><strong>10. Tin đăng có số điện thoại/địa chỉ email trong ô tên hoặc trong nội dung tin</strong></span></h4>
 <p>Thông tin Số điện thoại và địa chỉ email đã được điền ở phần thông tin liên lạc. Do đó, bạn không cần điền các thông tin này ở nội dung tin/ô tên liên lạc.</p>
-<h4><span id="11-hinh-anh-trung-lap"><strong>11. Hình ảnh trùng lặp</strong></span></h4>
+<h4><span id="10-hinh-anh-trung-lap"><strong>11. Hình ảnh trùng lặp</strong></span></h4>
 <p>Các hình trùng lặp với những tin đang đăng, hoặc đã ẩn trên NYCSTORE đều bị từ chối. Bạn có thể tham khảo thêm quy định về <strong>Hình ảnh</strong> ở mục <strong>Quy định cơ bản.</strong></p>
-<h4><span id="12-tin-dang-quang-cao-don-thuan-quang-cao-tiep-thi"><strong>12. Tin đăng quảng cáo đơn thuần (quảng cáo tiếp thị)</strong></span></h4>
+<h4><span id="11-tin-dang-quang-cao-don-thuan-quang-cao-tiep-thi"><strong>12. Tin đăng quảng cáo đơn thuần (quảng cáo tiếp thị)</strong></span></h4>
 <p>Các tin không bán sản phẩm, dịch vụ cụ thể mà chỉ quảng cáo về công ty đều bị từ chối.</p>
 <p><span style="font-weight: 400;">Thông tin chi tiết và cụ thể về sản phẩm sẽ giúp bạn bán hàng được nhanh hơn. Do đó để đăng lại tin, vui lòng làm theo hướng dẫn sau:</span></p>
 <ul>
@@ -147,7 +143,7 @@ include('header.php');
 <li><span style="font-weight: 400;">Các tin chỉ quảng cáo về công ty &amp; mặt hàng 1 cách chung chung (tin quảng bá đơn thuần), hoặc chỉ nêu báo giá/ liệt kê các mặt hàng mà không miêu tả, sẽ không được đăng.</span></li>
 </ul>
 <p>Bạn có thể tham khảo thêm quy định về <strong>Nội dung tin đăng</strong> ở mục <strong>Quy định cơ bản của tin đăng</strong>.</p>
-<h4><span id="13-tin-dang-co-nhieu-mat-hangdich-vuvi-tri-tuyen-dung"><strong>13. Tin đăng có nhiều mặt hàng/dịch vụ/vị trí tuyển dụng</strong></span></h4>
+<h4><span id="12-tin-dang-co-nhieu-mat-hangdich-vuvi-tri-tuyen-dung"><strong>13. Tin đăng có nhiều mặt hàng/dịch vụ/vị trí tuyển dụng</strong></span></h4>
 <p>Để người mua tìm thấy thông tin của bạn 1 cách dễ dàng nhất, <strong>NYCSTORE </strong>quy định:</p>
 <ul>
 <li>Mỗi tin rao vặt chỉ được đăng 1 mặt hàng/dịch vụ cần cung cấp.</li>
@@ -156,9 +152,9 @@ include('header.php');
 <li>Đối với <em>Bất động sản,</em> mỗi tin chỉ được đăng bán 1 căn nhà/chung cư hoặc 1 dự án.</li>
 <li>Đối với <em>Tuyển dụng,</em> nội dung cần có miêu tả công việc, giới thiệu công ty, yêu cầu về kỹ năng, hồ sơ xin việc và chỉ tuyển 1 vị trí.</li>
 </ul>
-<h4><span id="14-tin-dang-co-gia-ngoai-te"><strong>14. Tin đăng có giá ngoại tệ</strong></span></h4>
+<h4><span id="13-tin-dang-co-gia-ngoai-te"><strong>14. Tin đăng có giá ngoại tệ</strong></span></h4>
 <p>Theo Pháp lệnh Ngoại hối của Nhà nước, mọi tin đăng có giá ngoại tệ đều bị từ chối.</p>
-<h4><span id="15-sai-chuyen-muc-hoac-khu-vuc-dang-tin"><strong>15. Sai chuyên mục hoặc khu vực đăng tin</strong></span></h4>
+<h4><span id="14-sai-chuyen-muc-hoac-khu-vuc-dang-tin"><strong>15. Sai chuyên mục hoặc khu vực đăng tin</strong></span></h4>
 <p>Để giúp người mua tìm sản phẩm của bạn dễ dàng hơn<strong>, </strong>hãy chọn đúng chuyên mục của sản phẩm và đúng khu vực bạn sinh sống.</p>
 <p><span style="font-weight: 400;">Bạn có thể tham khảo các chuyên mục hiện tại của NYCSTORE để chọn đúng chuyên mục khi đăng tin:</span></p>
 <table style="border-color: #000000;" border="1">
@@ -345,17 +341,6 @@ include('header.php');
 </tr>
 </tbody>
 </table>
-<h4><span id="16-du-an-chua-duoc-cap-nhat"><b>16. Dự án chưa được cập nhật</b></span></h4>
-<p><span style="font-weight: 400;">Khi tin đăng của bạn bị từ chối do dự án chưa được cập nhật, hãy giúp NYCSTORE cập nhật dự án bằng cách gửi email về trogiup@chotot.vn và cung cấp cho chúng tôi các thông tin:</span></p>
-<p><span style="font-weight: 400;">– Tên dự án</span><span style="font-weight: 400;"><br>
-</span><span style="font-weight: 400;">– Địa chỉ&nbsp;</span><span style="font-weight: 400;"><br>
-</span><span style="font-weight: 400;">– Tên chủ đầu tư</span><span style="font-weight: 400;"><br>
-</span><span style="font-weight: 400;">– Ngày khởi công – Ngày hoàn thành</span><span style="font-weight: 400;"><br>
-</span><span style="font-weight: 400;">– Đường link giới thiệu dự án từ chủ đầu tư</span><span style="font-weight: 400;"><br>
-</span></p>
-<p><span style="font-weight: 400;">Chúng tôi sẽ cập nhật trong thời gian sớm nhất.&nbsp;</span><span style="font-weight: 400;"><br>
-</span></p>
-<p><span style="font-weight: 400;">Do số lượng dự án ở chuyên mục Bất Động sản có thể thay đổi liên tục, nên không tránh khỏi vấn đề chưa kịp cập nhật. Vì thế, NYCSTORE rất mong nhận được phản hồi của người dùng, góp phần xây dựng NYCSTORE ngày một hiệu quả hơn.</span></p>
 
 <?php
 include('footer.php');
