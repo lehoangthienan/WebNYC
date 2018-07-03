@@ -3,6 +3,7 @@ session_start();
 if(isset($_SESSION['uid']))
 {
 	header('Location: index.php');
+	exit();
 }
 ?>
 <!DOCTYPE html>
@@ -36,6 +37,7 @@ if(isset($_SESSION['uid']))
 				{
 					$taikhoan=$_POST['taikhoan'];
 				}
+
 				if(empty($_POST['matkhau']))
 				{
 					$errors[]='matkhau';
@@ -44,9 +46,10 @@ if(isset($_SESSION['uid']))
 				{
 					$matkhau=md5($_POST['matkhau']);
 				}
+
 				if(empty($errors))
 				{
-					$query="SELECT id,taikhoan,matkhau,hoten,admin FROM tbluser WHERE taikhoan='{$taikhoan}' OR matkhau='{$matkhau}'";
+					$query="SELECT id,taikhoan,matkhau,hoten,admin FROM tbluser WHERE taikhoan='{$taikhoan}' AND matkhau='{$matkhau}'";
 					$result=mysqli_query($dbc,$query);kt_query($result,$query);
 					if(mysqli_num_rows($result)==1)
 					{
@@ -54,8 +57,9 @@ if(isset($_SESSION['uid']))
 						$_SESSION['uid']=$id;
 						$_SESSION['hoten']=$hoten;
 						$_SESSION['admin']=$admin;
-						header('Location: index.php');
-
+						?>
+						<script>window.location = "index.php";</script>
+						<?php
 					}
 					else
 					{
