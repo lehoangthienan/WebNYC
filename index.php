@@ -39,11 +39,10 @@
 </div>
 	</div>
 	<?php
-	// $data="SELECT * FROM tbluser WHERE taikhoan = 'abc' ";
+	// $data="UPDATE tbluser SET admin=1 WHERE taikhoan='admin'";
 	// $query_a=mysqli_query($dbc,$data);
 	// $dm_info=mysqli_fetch_assoc($query_a);
-	// echo $dm_info['taikhoan'];
-	// echo $dm_info['matkhau'];
+	// echo "OK";
 	 //echo SELECT * FROM tbluser ?>
 </div>
 <?php include('footer.php'); ?>

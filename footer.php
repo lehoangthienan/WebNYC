@@ -52,11 +52,11 @@
                             </li>
                             <li class="clearfix">
                                 <i class="fa fa-phone"></i>
-                                <span>(028) 372 52002</span>
+                                <span>0949930259</span>
                             </li>
                             <li class="clearfix">
                                 <i class="fa fa-envelope"></i>
-                                <span><a href="mailto:sale.24hstore@gmail.com">info@uit.edu.vn</a></span>
+                                <span><a href="mailto:sale.24hstore@gmail.com">lienhe@nycstore.top</a></span>
                             </li>
                         </ul>
                     </div>

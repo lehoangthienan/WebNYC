@@ -43,7 +43,7 @@
 				{
 					//Nếu p không có, thì sẽ truy vấn CSDL để tìm xem có bao nhiêu page
 					if($dm==1)
-						$query_pg="SELECT COUNT(id) FROM tblsanpham WHERE (danhmucsanpham=4 OR danhmucsanpham=3) AND status='0'";
+						$query_pg="SELECT COUNT(id) FROM tblsanpham WHERE (danhmucsanpham=5 OR danhmucsanpham=6 OR danhmucsanpham=7 OR danhmucsanpham=8 OR danhmucsanpham=9) AND status='0'";
 					else
 						$query_pg="SELECT COUNT(id) FROM tblsanpham WHERE danhmucsanpham=".$dm." AND status='0'";
 					$results_pg=mysqli_query($dbc,$query_pg);
@@ -59,7 +59,7 @@
 					}
 				}
 				if($dm==1)
-					$query="SELECT * FROM tblsanpham WHERE (danhmucsanpham=4 OR danhmucsanpham=3) AND status='0' ORDER BY thoigian DESC LIMIT {$start},{$limit}";
+					$query="SELECT * FROM tblsanpham WHERE (danhmucsanpham=5 OR danhmucsanpham=6 OR danhmucsanpham=7 OR danhmucsanpham=8 OR danhmucsanpham=9) AND status='0' ORDER BY thoigian DESC LIMIT {$start},{$limit}";
 				else 
 				$query="SELECT * FROM tblsanpham WHERE danhmucsanpham=".$dm." AND status='0' ORDER BY thoigian DESC LIMIT {$start},{$limit}";
 				$results=mysqli_query($dbc,$query);

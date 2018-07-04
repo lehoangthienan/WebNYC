@@ -55,8 +55,8 @@ include('header.php');
 <li><strong>Luôn đi cùng 1 người bạn.</strong></li>
 <li>Để tránh trường hợp phát sinh mâu thuẫn sau khi bán, nên trao đổi chi tiết các điều khoản khi giao dịch và yêu cầu người mua kiểm tra hàng hóa cẩn thận trong quá trình giao dịch.</li>
 <li>Nên thận trọng đối với những giao dịch quốc tế hoặc yêu cầu chuyển hàng/chuyển tiền ra nước ngoài.</li>
-<li>NYCSTORE <strong>KHÔNG NHẬN</strong> ký gửi, bán hàng cho người dùng.</li>
-<li>Thận trọng nếu có ai liên hệ với bạn để thu phí dưới danh nghĩa NYCSTORE. Hãy liên lạc ngay với chúng tôi để được hỗ trợ kịp thời.</li>
+<li>Chợ Tốt <strong>KHÔNG NHẬN</strong> ký gửi, bán hàng cho người dùng.</li>
+<li>Thận trọng nếu có ai liên hệ với bạn để thu phí dưới danh nghĩa Chợ Tốt. Hãy liên lạc ngay với chúng tôi để được hỗ trợ kịp thời.</li>
 <li>Bảo quản hàng hoá và tài sản cá nhân của bạn cẩn thận khi tham gia giao dịch.</li>
 <li>Không giao hàng hóa khi chưa có gì đảm bảo như giấy tờ tùy thân hoặc tiền đặt cọc.</li>
 </ul>

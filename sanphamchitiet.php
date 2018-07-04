@@ -61,6 +61,7 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 						</div>
 					</div>
 					<h2>Nhận xét về sản phẩm</h2>
+					
 					<?php
 					if(isset($_SESSION['admin']))
 					{
@@ -140,7 +141,10 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 						{
 					?>
 					<a onclick="return confirm('Ban co muon xoa khong')" href="delete_cmt.php?id=<?php echo $binhluan['id'];?>&sp=<?php echo $id;?>">Xóa</a>
-					<a data-toggle="modal" data-target="#myModal<?=$binhluan['id']?>">  Chỉnh Sửa</a>
+<!-- 					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ --> 	  				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+					<a data-toggle="modal" data-target="#myModal<?=$binhluan['id']?>">Chỉnh Sửa</a>
 					<div class="modal fade" id="myModal<?=$binhluan['id']?>" role="dialog">
 					    <div class="modal-dialog">
 					    
@@ -169,9 +173,9 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 					          	
 					          	
 					        </div>
-					        <!-- <div class="modal-footer">
+					         <div class="modal-footer">
 					          	<button type="button" class="btn btn-default" data-dismiss="modal">Lưu</button>
-					        </div> -->
+					        </div>
 					     	</div>
 					      
 					    </div>
@@ -195,7 +199,7 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 							kt_query($results,$query);
 							
 						}
-						if($_SESSION['uid']==$dm_info['idnguoidang'])
+						if($_SESSION['admin']==1||$_SESSION['uid']==$dm_info['idnguoidang'])
 						{
 						echo '
 						<div class="admin-buttons">
@@ -204,16 +208,15 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 						    </form>';
 						?>
 						<a href="edit_sanpham.php?id=<?php echo $dm_info['id'];?>" class="sanpham_box_order">Sửa bài đăng</a>
-						</div>
+
 						<?php
-						}
-						if($_SESSION['admin']==1)
-						{
-							if(isset($_POST["daytin"])) {
-								
-								$query="UPDATE tblsanpham SET thoigian = ADDDATE(NOW(), INTERVAL 1 DAY) WHERE id = {$id} ";
-								$results=mysqli_query($dbc,$query);
-								kt_query($results,$query);
+							if($_SESSION['admin']==1)
+							{
+								if(isset($_POST["daytin"])) {
+									
+									$query="UPDATE tblsanpham SET thoigian = ADDDATE(NOW(), INTERVAL 1 DAY) WHERE id = {$id} ";
+									$results=mysqli_query($dbc,$query);
+									kt_query($results,$query);
 								
 							}
 
@@ -225,6 +228,30 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 
 							';
 						}
+
+						?>
+
+						</div>
+						<?php
+						}
+						// if($_SESSION['admin']==1)
+						// {
+						// 	if(isset($_POST["daytin"])) {
+								
+						// 		$query="UPDATE tblsanpham SET thoigian = ADDDATE(NOW(), INTERVAL 1 DAY) WHERE id = {$id} ";
+						// 		$results=mysqli_query($dbc,$query);
+						// 		kt_query($results,$query);
+								
+						// 	}
+
+						// 	echo '
+						// 	<form method="POST">
+
+						// 	<input class="sanpham_box_order" type="submit" name="daytin" class="btn btn-primary" value="Đẩy tin">
+						// 	</form>
+
+						// 	';
+						// }
 					}
 					?>
 					<div class="col-xs-12 margin-top-05"><strong class="text-muted">Chia sẻ tin đăng này cho bạn bè:</strong><hr style="margin: 5px 0px 0px;">
