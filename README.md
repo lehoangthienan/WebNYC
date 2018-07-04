@@ -25,14 +25,6 @@
 +   XAMPP Control Panel v3.2.2
 +   Sublime Text
 +   PHP&MySql
-+   Filezilla
 ## Deploy enviroments
     
 -   Web
-123
-456
-789
-098
-678
-643
-

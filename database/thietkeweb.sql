@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 18, 2018 lúc 01:31 PM
--- Phiên bản máy phục vụ: 10.1.28-MariaDB
--- Phiên bản PHP: 5.6.32
+-- Thời gian đã tạo: Th5 28, 2018 lúc 09:41 PM
+-- Phiên bản máy phục vụ: 10.1.31-MariaDB
+-- Phiên bản PHP: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -218,12 +218,12 @@ CREATE TABLE `tblsanpham` (
 
 INSERT INTO `tblsanpham` (`id`, `idnguoidang`, `danhmucsanpham`, `ten`, `ngaydang`, `giodang`, `tomtat`, `noidung`, `anh`, `gia`, `donvitinh`, `view`, `status`, `thoigian`) VALUES
 (1, 0, 4, 'Điện Thoại SamSung Note8', '0000-00-00', '00:00:00', '', 'Cụ thể, đoạn quảng cáo trên đã ghi lại toàn bộ quá trình thay đổi của một chàng trai vốn là iFan chân chính từ năm 2007, nhưng cuối cùng lại quyết định chuyển sang sử dụng Galaxy Note 8 của Samsung vì những tính năng cao cấp \"không thể cưỡng lại được\". Đã lâu lắm rồi, kể từ thời Galaxy S II và Galaxy S III, người ra mới thấy một quảng cáo táo bạo và hài hước như vậy đến từ Samsung.\r\n\r\nMở đầu bằng bối cảnh năm 2007 - năm ra mắt dòng iPhone đầu tiên của Apple, anh chàng nhân vật chính của chúng ta đã bị cuốn hút bởi hình ảnh một dòng người xếp hàng dài đứng đợi trước Apple Store. Và cuối cùng chính anh cũng đã \"mở hầu bao\" để sở hữu một chiếc iPhone cho riêng mình. Ngay sau khi \"đập hộp\", anh lập tức gọi điện cho một người bạn với giọng điệu vô cùng đắc ý: \"Đoán xem tớ vừa mua được gì này\". Ở thời điểm ấy, có thể nói iPhone là một cái gì đó quá hấp dẫn, quá mới lạ mà bất cứ tín đồ công nghệ nào cũng muốn có được.\r\n\r\n', 'andres-iniesta.jpg', 1000000, 'VND', 2, 1, '0000-00-00 00:00:00'),
-(7, 6, 4, 'Note 8', '0000-00-00', '00:00:00', '', 'Diện thoại Note 8', 'upload/636506554439585001_1.jpg', 1000, '$', 9, 0, '0000-00-00 00:00:00'),
+(7, 6, 4, 'Note 8', '0000-00-00', '00:00:00', '', 'Diện thoại Note 8', 'upload/636506554439585001_1.jpg', 1000, '$', 16, 0, '0000-00-00 00:00:00'),
 (11, 6, 4, 'Iphone 7', '2018-04-02', '14:28:45', '', 'điện thoại cũ xài tốt', 'upload/iphone-7-gold_6e02-ls.jpg', 10000000, 'VNĐ', 6, 1, '0000-00-00 00:00:00'),
 (12, 6, 4, 'Macbook', '2018-04-03', '10:17:23', '', '<p style=\"text-align:start\">Tính năng mã hoá&nbsp;<strong>FileVault Disk Encryption</strong>&nbsp;được bật mặt định trên Mac OS từ phiên bản Yosemite trở đi. Điều này giúp bảo vệ file trên MacBook của bạn, ngăn chặn việc truy cập trái phép trong trường hợp máy bị đánh cắp.</p>\r\n\r\n<p style=\"text-align:start\">Trong một số trường hợp, tính năng này có thể làm giảm tốc độ của MacBook. Để cải thiện tốc độ giúp MacBook chạy nhanh hơn, bạn có thể vào&nbsp;<strong>System Preferences</strong>, chọn&nbsp;<strong>Security &amp; Privacy</strong>&nbsp;--&gt;&nbsp;<strong>FileVault</strong>&nbsp;và tắt nó đi.</p>\r\n', 'upload/s-l1000.jpg', 2000, '$', 9, 1, '0000-00-00 00:00:00'),
 (13, 0, 4, 'Nokia 1280', '2018-04-06', '15:47:59', 'điện thoại đen trắng', '<p>điện thoại cục gạch cực bền<br />\r\n&nbsp;</p>\r\n', 'upload/nokia-1280.jpg', 199000, 'VNĐ', 29, 0, '0000-00-00 00:00:00'),
 (14, 0, 4, 'Note 3', '2018-04-09', '19:46:45', 'Note 3 k xài nữa', '<p>Note 3 k xài nữa bán</p>\r\n', 'upload/note3.jpg', 1500000, 'VNĐ', 2, 1, '0000-00-00 00:00:00'),
-(15, 0, 4, 'Note 4', '2018-04-09', '19:50:29', 'Bán note 4', '<p>Note 4 xài ok</p>\r\n', 'upload/note4.png', 2000000, 'VNĐ', 13, 0, '2018-05-06 17:52:13'),
+(15, 0, 4, 'Note 4', '2018-04-09', '19:50:29', 'Bán note 4', '<p>Note 4 xài ok</p>\r\n', 'upload/note4.png', 2000000, 'VNĐ', 23, 0, '2018-05-06 17:52:13'),
 (16, 0, 4, 'Note 5', '2018-04-09', '19:51:00', 'note 5 xài rất ok', '<p>note 5 hàng cũ</p>\r\n', 'upload/note5.jpg', 2500000, 'VNĐ', 25, 0, '0000-00-00 00:00:00'),
 (19, 0, 4, 'New macbook 12 MNYF2 Space Gray- Model 2017 (Hàng chính Hãng)', '2018-04-11', '11:16:49', 'Apple cập nhật toàn bộ dòng MacBook của hãng lên hệ phần cứng sử dụng chip Kaby Lake của Intel. MacBook 12 (2017) cũng không là ngoại lệ khi được thiết kế bộ vi xử lý Intel Core m3, i5 và i7 thế hệ th', '<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina&nbsp;</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina 12 inch tuyệt đẹp trên MacBook thực sự là điều cần quan tâm.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Với hơn 3 triệu điểm ảnh và không viền màn hình, mỗi bức ảnh đều nhảy ra khỏi màn hình với chi tiết phong phú, rực rỡ.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Tất cả trên một màn hình Retina mỏng đáng kinh ngạc.</span></p>\r\n\r\n<p style=\"text-align:start\"><img src=\"https://file.hstatic.net/1000190192/file/macbook-1024x576_grande.jpg\" style=\"border:0px; box-sizing:border-box; display:block; font-family:open sans,sans-serif !important; height:auto; margin-left:auto; margin-right:auto; max-width:100%; vertical-align:middle\" /></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Kiến trúc không quạt</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:open sans,sans-serif !important\">MacBook được xây dựng để các thao tác gần như không gây ra tiếng ồn.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Bộ xử lý của nó chạy chỉ với 5 watt điện, tạo ra ít nhiệt hơn và loại bỏ sự cần thiết phải có một quạt để làm mát máy tính.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Thay vào đó, bảng logic nằm trên một tấm graphite dị hướng giúp giải tán bất kỳ nhiệt nào.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Vì vậy, bạn sẽ không nghe thấy một tiếng ồn nào trong khi MacBook của bạn là khó làm việc.</span></p>\r\n\r\n<p style=\"text-align:start\"><img src=\"https://file.hstatic.net/1000190192/file/2_grande.jpg\" style=\"border:0px; box-sizing:border-box; display:block; font-family:open sans,sans-serif !important; height:auto; margin-left:auto; margin', 'upload/s-l1000.jpg', 27790000, 'VNĐ', 9, 1, '2018-05-15 17:50:49'),
 (20, 0, 4, 'New macbook 12 MNYF2 Space Gray- Model 2017', '2018-04-11', '11:58:37', 'Apple cập nhật toàn bộ dòng MacBook của hãng lên hệ phần cứng sử dụng chip Kaby Lake của Intel. MacBook 12 (2017) cũng không là ngoại lệ khi được thiết kế bộ vi xử lý Intel Core m3, i5 và i7 thế hệ th', '<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina&nbsp;</span></strong></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:open sans,sans-serif !important\">Màn hình Retina 12 inch tuyệt đẹp trên MacBook thực sự là điều cần quan tâm.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Với hơn 3 triệu điểm ảnh và không viền màn hình, mỗi bức ảnh đều nhảy ra khỏi màn hình với chi tiết phong phú, rực rỡ.</span>&nbsp;<span style=\"font-family:open sans,sans-serif !important\">Tất cả trên một màn hình Retina mỏng đáng kinh ngạc.</span></p>\r\n\r\n<p style=\"text-align:start\"><img src=\"https://file.hstatic.net/1000190192/file/macbook-1024x576_grande.jpg\" style=\"border:0px; box-sizing:border-box; display:block; font-family:open sans,sans-serif !important; height:auto; margin-left:auto; margin-right:auto; max-width:100%; vertical-align:middle\" /></p>\r\n\r\n<p style=\"text-align:justify\"><strong><span style=\"font-family:open sans,sans-serif !important\">Kiến trúc không quạt</span></strong></p>\r\n', 'upload/s-l1000.jpg', 27790000, 'VNĐ', 7, 1, '0000-00-00 00:00:00'),
@@ -231,7 +231,7 @@ INSERT INTO `tblsanpham` (`id`, `idnguoidang`, `danhmucsanpham`, `ten`, `ngaydan
 (22, 6, 3, 'Đồng hồ người yêu cũ tặng', '2018-04-17', '23:38:23', 'Đồng hồ người yêu cũ tặng', '<p>Đồng hộ chạy tốt, của người yêu cũ tặng, màu đồng rất đẹp.<br />\r\n&nbsp;</p>\r\n', 'upload/big-bang-44-467149f15489.jpg', 1000000, '', 35, 1, '0000-00-00 00:00:00'),
 (23, 0, 4, 'Dien Thoai', '2018-04-22', '10:39:57', 'Điện thoại mới ', '<p>điện thoại mới mua, xài rât ok</p>\r\n', 'upload/iphone-7-gold_6e02-ls.jpg', 10000000, '', 4, 1, '0000-00-00 00:00:00'),
 (25, 0, 0, 'Lắc tay bạc', '2018-05-05', '16:42:16', 'Lắc tay bạc', '<p>lắc tay bạc người yêu tặng</p>\r\n', 'upload/lactay.bmp', 200000, 'VNĐ', 30, 1, '2018-05-05 16:42:16'),
-(26, 6, 2, 'A', '2018-05-12', '15:56:45', 'aaaaaaaaaaaaaaaaaaa', '<p>aaaaaaaaaaaaaaaaaaaaaa<br />\r\n&nbsp;</p>\r\n', 'upload/nokia-1280.jpg', 100000, 'VNĐ', 66, 0, '2018-05-12 15:56:45');
+(26, 6, 2, 'A', '2018-05-12', '15:56:45', 'aaaaaaaaaaaaaaaaaaa', '<p>aaaaaaaaaaaaaaaaaaaaaa<br />\r\n&nbsp;</p>\r\n', 'upload/nokia-1280.jpg', 100000, 'VNĐ', 68, 0, '2018-05-12 15:56:45');
 
 -- --------------------------------------------------------
 
@@ -348,17 +348,18 @@ CREATE TABLE `tbluser` (
   `dienthoai` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `diachi` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `admin` int(1) NOT NULL
+  `admin` int(1) NOT NULL,
+  `ngaythamgia` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tbluser`
 --
 
-INSERT INTO `tbluser` (`id`, `taikhoan`, `matkhau`, `hoten`, `dienthoai`, `email`, `diachi`, `admin`) VALUES
-(2, 'tiendat', 'tiendat', 'Tiến Đạt', '0999xxx999', 'tiendat@gmail.com', 'Việt Nam', 0),
-(6, 'nguyenconghoan', 'conghoan', 'Nguyễn Công Hoan', '0985315125', 'hoannc@edu.vn', 'Trường đại học công nghệ thông tin', 0),
-(7, '1111', 'matkhau', 'Admin', '0949930259', '', 'Đại học công nghệ thông tin', 1);
+INSERT INTO `tbluser` (`id`, `taikhoan`, `matkhau`, `hoten`, `dienthoai`, `email`, `diachi`, `admin`, `ngaythamgia`) VALUES
+(2, 'tiendat', 'tiendat', 'Tiến Đạt', '0999xxx999', 'tiendat@gmail.com', 'Việt Nam', 0, '2018-04-25'),
+(6, 'nguyenconghoan', 'conghoan', 'Nguyễn Công Hoan', '0985315125', 'hoannc@edu.vn', 'Trường đại học công nghệ thông tin, Khu phố 6, phường Linh Trung, Thủ Đức', 0, '2018-04-10'),
+(7, '1111', 'matkhau', 'Admin', '0949930259', '', 'Đại học công nghệ thông tin', 1, '2018-05-01');
 
 -- --------------------------------------------------------
 

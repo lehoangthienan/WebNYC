@@ -37,19 +37,18 @@ function menu($a,$parent_id=0,$dem=0)
 {
 	global $dbc;
 	$cate_child=array();
-	$query_dq_mn="SELECT * FROM tbldanhmucsanpham WHERE parent_id=".$parent_id." AND menu=1 ORDER BY ordernum DESC";
+	$query_dq_mn="SELECT * FROM tbldanhmucsanpham WHERE parent_id=".$parent_id." ORDER BY ordernum DESC";
 	$categories_mn=mysqli_query($dbc,$query_dq_mn);
 	while ($category_mn=mysqli_fetch_array($categories_mn,MYSQLI_ASSOC))
 	{
-		$cate_child[]=$category_mn;	
-	}	
+		$cate_child[]=$category_mn;
+	}
 	if($cate_child)
 	{
-		
 		if($dem==0)
 		{
 			echo "<ul class='sf-menu' id='example'>";
-			echo "<li><a href='http://localhost/webnyc/'>Trang Chủ</a></li>";
+			echo "<li><a href='http://nycstore.top/'>Trang Chủ</a></li>";
 			echo "<li><a href='topview.php'>Top lượt xem</a></li>";
 		}		
 		else
@@ -60,8 +59,8 @@ function menu($a,$parent_id=0,$dem=0)
 		foreach ($cate_child as $key => $item) 
 		{	
 			echo "<li><a href='tinbycategory_1.php?dm=".$item['id']."'>".$item['danhmucsanpham']."</a>";
-			menu($item['id'],++$dem);			
-			echo "</li>";			
+			menu($a, $item['id'],++$dem);			
+			echo "</li>";
 		}
 		if(count($cate_child)==$dem)
 		{	
@@ -93,7 +92,7 @@ function menu_dacap($parent_id=0,$dem=0)
 		if($dem==0)
 		{
 			echo "<ul class='sf-menu' id='example'>";
-			echo "<li><a href='http://localhost/webnyc/'>Trang Chủ</a></li>";
+			echo "<li><a href='http://nycstore.top/'>Trang Chủ</a></li>";
 			echo "<li><a href='topview.php'>Top lượt xem</a></li>";
 		}		
 		else
@@ -104,6 +103,7 @@ function menu_dacap($parent_id=0,$dem=0)
 		foreach ($cate_child as $key => $item) 
 		{	
 			echo "<li><a href='tinbycategory_1.php?dm=".$item['id']."'>".$item['danhmucsanpham']."</a>";
+
 			menu_dacap($item['id'],++$dem);			
 			echo "</li>";			
 		}

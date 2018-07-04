@@ -170,8 +170,6 @@ if(isset($_GET['id'])&& filter_var($_GET['id'],FILTER_VALIDATE_INT,array('min_ra
 									</div>
 									<input type="submit" name="submit" class="btn btn-primary" value="Lưu">
 								</form>					          	
-					          	
-					          	
 					        </div>
 					         <div class="modal-footer">
 					          	<button type="button" class="btn btn-default" data-dismiss="modal">Lưu</button>
