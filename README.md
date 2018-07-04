@@ -25,8 +25,8 @@
 +   XAMPP Control Panel v3.2.2
 +   Sublime Text
 +   PHP&MySql
-
++   Filezilla
 ## Deploy enviroments
     
 -   Web
-1
+
